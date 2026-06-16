@@ -1,7 +1,7 @@
 import React from 'react'
 import './_modal.scss'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useModal } from '../../../hooks/useModal'
+import { useModal } from '@/common/hooks/useModal'
 
 interface ModalProps {
     children: React.ReactNode

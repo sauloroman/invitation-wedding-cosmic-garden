@@ -1,7 +1,7 @@
 import React from 'react'
 import './_timer.scss'
-import { useCountdown } from '../../../hooks/useCountdown'
-import { ScrollReveal } from '../ScrollReveal/ScrollReveal'
+import { useCountdown } from '@/common/hooks/useCountdown'
+import { ScrollReveal } from '@/common/components/ScrollReveal/ScrollReveal'
 
 export const TimerBox: React.FC<{ number: string; concept: string; delay: number }> = ({ number, concept, delay }) => {
     return (

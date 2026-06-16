@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './_music.scss'
-import { Button } from '../Button/Button'
-import song from '../../../assets/music/song.mp3'
+import { Button } from '@/common/components/Button/Button'
+import song from '@/assets/music/song.mp3'
 
 export const Music: React.FC = () => {
     const [isPlaying, setIsPlaying] = useState<boolean>(true)
