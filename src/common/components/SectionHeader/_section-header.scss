@@ -1,0 +1,34 @@
+@import '../../../styles/variables.scss';
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    &__title {
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: $color-primary-900;
+    }
+
+    &__subtitle {
+        color: $color-primary-500;
+        font-family: 'Pinyon Script', cursive;
+        font-size: 2.4rem;
+    }
+
+    &.text-white,
+    &.text-primary,
+    &.text-secondary,
+    &.text-tertiary,
+    &.text-accent,
+    &.text-neutral {
+
+        .section-header__title,
+        .section-header__subtitle {
+            color: inherit;
+        }
+    }
+}

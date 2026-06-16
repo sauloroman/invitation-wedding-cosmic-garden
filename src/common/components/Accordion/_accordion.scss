@@ -1,0 +1,113 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.accordion {
+    width: 100%;
+    max-width: 60rem;
+    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &__item {
+        border: 1px solid rgba($color-tertiary-300, 0.4);
+        background-color: rgba($color-primary-50, 0.7);
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &--open {
+            border-color: $color-tertiary-500;
+            background-color: $color-primary-50;
+            box-shadow: 0 4px 20px rgba($color-primary-900, 0.05);
+            @include folded-corners(3rem, 'bottom-left');
+
+            .accordion__icon {
+                transform: rotate(180deg);
+                color: $color-tertiary-800;
+            }
+
+            .accordion__content-wrapper {
+                grid-template-rows: 1fr;
+            }
+        }
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        outline: none;
+        transition: background-color 0.2s ease;
+
+        &-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        &-icon {
+            font-size: 3rem;
+        }
+
+        &:hover {
+            background-color: rgba($color-tertiary-800, 0.03);
+        }
+    }
+
+    &__title {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 1.4rem;
+        color: $color-neutral-900;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-secondary-500;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+    }
+
+    &__content-wrapper {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+
+        &>div {
+            overflow: hidden;
+        }
+    }
+
+    &__content {
+        min-height: 0;
+    }
+
+    &__content-inner {
+        padding: 0 2rem 2rem;
+        font-size: 1.5rem;
+        line-height: 1.8;
+        color: $color-primary-800;
+
+        p {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        button,
+        .btn {
+            margin-top: 1.5rem;
+        }
+    }
+}

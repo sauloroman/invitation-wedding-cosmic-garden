@@ -1,0 +1,124 @@
+// ----------------------------------------------------
+// Keyframes
+// ----------------------------------------------------
+
+// 1. Suave balanceo flotante continuo (péndulo/flotar)
+@keyframes float {
+    0% {
+        transform: translate(-50%, -55%) translateY(0);
+    }
+
+    50% {
+        transform: translate(-50%, -55%) translateY(-8px);
+    }
+
+    100% {
+        transform: translate(-50%, -55%) translateY(0);
+    }
+}
+
+// 2. Revelado elegante con desenfoque al cargar (Entrada)
+@keyframes soft-reveal {
+    0% {
+        opacity: 0;
+        filter: blur(10px) drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+        transform: translate(-50%, -52%) scale(0.96);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0) drop-shadow(0 4px 12px rgba(154, 154, 154, 0.4)); // similar a $color-neutral-500
+        transform: translate(-50%, -55%) scale(1);
+    }
+}
+
+// 3. Respiración orgánica / Latido lento (Continuo)
+@keyframes pulse-breath {
+
+    0%,
+    100% {
+        transform: translate(-50%, -55%) scale(1);
+        filter: drop-shadow(0 4px 12px rgba(154, 154, 154, 0.4));
+    }
+
+    50% {
+        transform: translate(-50%, -55%) scale(1.015);
+        filter: drop-shadow(0 8px 20px rgba(154, 154, 154, 0.55));
+    }
+}
+
+// 4. Brillo estelar/destello en bordes y sombras (Continuo)
+@keyframes border-shimmer {
+
+    0%,
+    100% {
+        border-color: #DEC5CE; // $color-accent-300
+        filter: drop-shadow(0 4px 12px rgba(222, 197, 206, 0.3));
+    }
+
+    50% {
+        border-color: #D9B5A5; // $color-tertiary-500
+        filter: drop-shadow(0 4px 18px rgba(217, 181, 165, 0.6));
+    }
+}
+
+// 5. Desvanecimiento y subida suave (Para elementos internos escalonados)
+@keyframes fade-up-in {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ----------------------------------------------------
+// Helper classes to make swapping easy
+// ----------------------------------------------------
+
+.anim-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.anim-pulse {
+    animation: pulse-breath 8s ease-in-out infinite;
+}
+
+.anim-shimmer {
+    // Para shimmer combinamos la flotación con el brillo del borde
+    animation:
+        float 6s ease-in-out infinite,
+        border-shimmer 8s ease-in-out infinite;
+}
+
+// Clase de entrada (se puede combinar con las continuas)
+.anim-reveal {
+    animation: soft-reveal 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes fade-in-indicator {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 15px);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes bounce-indicator {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}

@@ -1,0 +1,138 @@
+@mixin difuminatedGradient($color: $color-bg, $height: 25%, $positionY: 0, $double: false) {
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: $positionY;
+        left: 0;
+        width: 100%;
+        height: $height;
+        background: linear-gradient(to top, $color 0%, transparent 100%);
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    @if($double) {
+        &::before {
+            content: '';
+            position: absolute;
+            top: $positionY;
+            left: 0;
+            width: 100%;
+            height: $height;
+            background: linear-gradient(to bottom, $color 0%, transparent 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+    }
+
+}
+
+@mixin line($height, $circlePosition: 'bottom') {
+    width: 2px;
+    height: $height;
+    opacity: .4;
+    background-color: rgba($color-tertiary-800, .5);
+    position: relative;
+
+    @if($circlePosition =='bottom') {
+        &::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba($color-tertiary-800, .8);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    @if($circlePosition =='top') {
+        &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba($color-tertiary-800, .8);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@mixin backgroundImage($opacity: 0.1) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: $opacity;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin folded-corners($size: 3rem, $corners: 'both', $size-y: null) {
+    position: relative;
+    $size-x: $size;
+
+    @if ($size-y ==null) {
+        $size-y: $size;
+    }
+
+    $clip-top-left: "0 0";
+    $clip-top-right: "100% 0";
+    $clip-bottom-right: "100% 100%";
+    $clip-bottom-left: "0 100%";
+
+    @if ($corners =='both' or $corners =='top-right') {
+        $clip-top-right: "calc(100% - #{$size-x}) 0, 100% #{$size-y}";
+    }
+
+    @if ($corners =='both' or $corners =='bottom-left') {
+        $clip-bottom-left: "#{$size-x} 100%, 0 calc(100% - #{$size-y})";
+    }
+
+    clip-path: polygon(#{$clip-top-left},
+        #{$clip-top-right},
+        #{$clip-bottom-right},
+        #{$clip-bottom-left});
+
+    @if ($corners =='both' or $corners =='bottom-left') {
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: $size-x;
+            height: $size-y;
+            background: linear-gradient(to top right, transparent 50%, $color-neutral-200 50%, $color-neutral-50 100%);
+            border-top: 1px solid $color-accent-300;
+            border-right: 1px solid $color-accent-300;
+            filter: drop-shadow(2px -2px 2px rgba(0, 0, 0, 0.08));
+            z-index: 10;
+            pointer-events: none;
+        }
+    }
+
+    @if ($corners =='both' or $corners =='top-right') {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: $size-x;
+            height: $size-y;
+            background: linear-gradient(to top right, $color-neutral-50 0%, $color-neutral-200 50%, transparent 50%);
+            border-bottom: 1px solid $color-accent-300;
+            border-left: 1px solid $color-accent-300;
+            filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.08));
+            z-index: 10;
+            pointer-events: none;
+        }
+    }
+}

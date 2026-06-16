@@ -1,0 +1,114 @@
+@import '../../../styles/variables.scss';
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+
+    &--small {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.1rem;
+    }
+
+    &--medium {
+        padding: 1.2rem 2.8rem;
+        font-size: 1.3rem;
+    }
+
+    &--large {
+        padding: 1.6rem 4rem;
+        font-size: 1.5rem;
+    }
+
+    &--primary {
+        background-color: $color-primary-600;
+        color: $color-neutral-700;
+        border: 1px solid $color-primary-600;
+
+        &:hover {
+            background-color: transparent;
+            color: $color-primary-900;
+        }
+    }
+
+    &--secondary {
+        background-color: $color-secondary-600;
+        color: white;
+        border: 1px solid $color-secondary-600;
+
+        &:hover {
+            background-color: transparent;
+            color: $color-secondary-600;
+        }
+    }
+
+    &--accent {
+        background-color: $color-accent-500;
+        color: white;
+        border: 1px solid $color-accent-500;
+
+        &:hover {
+            background-color: transparent;
+            color: $color-accent-500;
+        }
+    }
+
+    &--outline-primary,
+    &--outline {
+        background-color: transparent;
+        color: $color-primary-900;
+        border: 1px solid $color-primary-900;
+
+        &:hover {
+            background-color: $color-primary-900;
+            color: white;
+        }
+    }
+
+    &--outline-secondary {
+        background-color: transparent;
+        color: $color-secondary-600;
+        border: 1px solid $color-secondary-600;
+
+        &:hover {
+            background-color: $color-secondary-600;
+            color: white;
+        }
+    }
+
+    &--outline-tertiary {
+        background-color: transparent;
+        color: $color-tertiary-800;
+        border: 1px solid $color-tertiary-800;
+
+        &:hover {
+            background-color: $color-tertiary-800;
+            color: white;
+        }
+    }
+
+    &--outline-accent {
+        background-color: transparent;
+        color: $color-accent-500;
+        border: 1px solid $color-accent-500;
+
+        &:hover {
+            background-color: $color-accent-500;
+            color: white;
+        }
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
