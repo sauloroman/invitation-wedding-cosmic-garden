@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@use '../../../styles/variables';
+@use '../../../styles/mixins';
 
 .accordion {
     width: 100%;
@@ -10,20 +10,20 @@
     gap: 1.5rem;
 
     &__item {
-        border: 1px solid rgba($color-tertiary-300, 0.4);
-        background-color: rgba($color-primary-50, 0.7);
+        border: 1px solid rgba(variables.$color-tertiary-300, 0.4);
+        background-color: rgba(variables.$color-primary-50, 0.7);
         overflow: hidden;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
         &--open {
-            border-color: $color-tertiary-500;
-            background-color: $color-primary-50;
-            box-shadow: 0 4px 20px rgba($color-primary-900, 0.05);
-            @include folded-corners(3rem, 'bottom-left');
+            border-color: variables.$color-tertiary-500;
+            background-color: variables.$color-primary-50;
+            box-shadow: 0 4px 20px rgba(variables.$color-primary-900, 0.05);
+            @include mixins.folded-corners(3rem, 'bottom-left');
 
             .accordion__icon {
                 transform: rotate(180deg);
-                color: $color-tertiary-800;
+                color: variables.$color-tertiary-800;
             }
 
             .accordion__content-wrapper {
@@ -56,14 +56,14 @@
         }
 
         &:hover {
-            background-color: rgba($color-tertiary-800, 0.03);
+            background-color: rgba(variables.$color-tertiary-800, 0.03);
         }
     }
 
     &__title {
         font-family: 'Playfair Display SC', serif;
         font-size: 1.4rem;
-        color: $color-neutral-900;
+        color: variables.$color-neutral-900;
         font-weight: 300;
         letter-spacing: 1px;
     }
@@ -72,7 +72,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: $color-secondary-500;
+        color: variables.$color-secondary-500;
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
     }
 
@@ -95,7 +95,7 @@
         padding: 0 2rem 2rem;
         font-size: 1.5rem;
         line-height: 1.8;
-        color: $color-primary-800;
+        color: variables.$color-primary-800;
 
         p {
             margin-bottom: 1rem;

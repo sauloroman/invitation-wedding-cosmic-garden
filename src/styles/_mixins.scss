@@ -1,4 +1,6 @@
-@mixin difuminatedGradient($color: $color-bg, $height: 25%, $positionY: 0, $double: false) {
+@use "variables";
+
+@mixin difuminatedGradient($color: variables.$color-bg, $height: 25%, $positionY: 0, $double: false) {
     &::after {
         content: '';
         position: absolute;
@@ -31,7 +33,7 @@
     width: 2px;
     height: $height;
     opacity: .4;
-    background-color: rgba($color-tertiary-800, .5);
+    background-color: rgba(variables.$color-tertiary-800, .5);
     position: relative;
 
     @if($circlePosition =='bottom') {
@@ -40,7 +42,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background-color: rgba($color-tertiary-800, .8);
+            background-color: rgba(variables.$color-tertiary-800, .8);
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -54,7 +56,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background-color: rgba($color-tertiary-800, .8);
+            background-color: rgba(variables.$color-tertiary-800, .8);
             position: absolute;
             top: 0;
             left: 50%;
@@ -110,9 +112,9 @@
             left: 0;
             width: $size-x;
             height: $size-y;
-            background: linear-gradient(to top right, transparent 50%, $color-neutral-200 50%, $color-neutral-50 100%);
-            border-top: 1px solid $color-accent-300;
-            border-right: 1px solid $color-accent-300;
+            background: linear-gradient(to top right, transparent 50%, variables.$color-neutral-200 50%, variables.$color-neutral-50 100%);
+            border-top: 1px solid variables.$color-accent-300;
+            border-right: 1px solid variables.$color-accent-300;
             filter: drop-shadow(2px -2px 2px rgba(0, 0, 0, 0.08));
             z-index: 10;
             pointer-events: none;
@@ -127,9 +129,9 @@
             right: 0;
             width: $size-x;
             height: $size-y;
-            background: linear-gradient(to top right, $color-neutral-50 0%, $color-neutral-200 50%, transparent 50%);
-            border-bottom: 1px solid $color-accent-300;
-            border-left: 1px solid $color-accent-300;
+            background: linear-gradient(to top right, variables.$color-neutral-50 0%, variables.$color-neutral-200 50%, transparent 50%);
+            border-bottom: 1px solid variables.$color-accent-300;
+            border-left: 1px solid variables.$color-accent-300;
             filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.08));
             z-index: 10;
             pointer-events: none;

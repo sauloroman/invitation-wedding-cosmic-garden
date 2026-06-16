@@ -1,8 +1,8 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@use '../../styles/variables';
+@use '../../styles/mixins';
 
 .farewell {
-    background-color: $color-bg;
+    background-color: variables.$color-bg;
 
     &__container {
         padding: 4rem 2rem;
@@ -47,7 +47,7 @@
     padding: 8rem 2rem;
 
     &__bg {
-        @include backgroundImage(0.45);
+        @include mixins.backgroundImage(0.45);
         z-index: 1;
         pointer-events: none;
     }
@@ -67,7 +67,7 @@
         font-family: 'Pinyon Script', cursive;
         font-size: 3.6rem;
         text-align: center;
-        color: $color-primary-500;
+        color: variables.$color-primary-500;
         line-height: 1.2;
         z-index: 2;
     }
@@ -86,7 +86,7 @@
 
         a {
             font-weight: bold;
-            color: $color-primary-700;
+            color: variables.$color-primary-700;
             border-bottom: 1px solid currentColor;
             padding-bottom: .3rem;
         }

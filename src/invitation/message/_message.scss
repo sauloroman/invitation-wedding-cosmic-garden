@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins.scss';
+@use '../../styles/variables';
+@use '../../styles/mixins.scss';
 
 .message {
 
@@ -9,7 +9,7 @@
     &__content {
         text-align: center;
         padding: 5rem;
-        background-color: $color-primary-50;
+        background-color: variables.$color-primary-50;
     }
 
     &__line {
@@ -18,13 +18,13 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        @include line(6rem, 'bottom');
+        @include mixins.line(6rem, 'bottom');
     }
 
     &__text {
         font-size: 1.5rem;
         line-height: 1.8;
-        color: $color-primary-800;
+        color: variables.$color-primary-800;
         max-width: 65rem;
         margin: 2.5rem auto 0;
         font-weight: 400;
@@ -33,7 +33,7 @@
 
     &__icon {
         font-size: 2.4rem;
-        color: $color-primary-400;
+        color: variables.$color-primary-400;
     }
 
     &__container {
@@ -45,9 +45,9 @@
         margin: 0 auto;
         aspect-ratio: 1 / 1;
         border: none;
-        background-color: $color-bg;
+        background-color: variables.$color-bg;
 
-        @include difuminatedGradient($color: $color-bg,
+        @include mixins.difuminatedGradient($color: variables.$color-bg,
             $height: 35%,
             $positionY: 0,
             $double: true);

@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@use '../../../styles/variables.scss';
 
 .envelop-container {
   padding: 1rem;
@@ -11,10 +11,10 @@
   box-sizing: border-box;
   position: relative;
 
-  background-color: $color-neutral-50; // Deeper dark space background
+  background-color: variables.$color-neutral-50; // Deeper dark space background
   background-image:
-    radial-gradient(circle at 50% 30%, rgba($color-primary-200, 0.4) 0%, rgba($color-primary-50, 1) 70%),
-    radial-gradient(circle at 20% 80%, rgba($color-tertiary-200, 0.25) 0%, rgba($color-tertiary-50, 1) 60%);
+    radial-gradient(circle at 50% 30%, rgba(variables.$color-primary-200, 0.4) 0%, rgba(variables.$color-primary-50, 1) 70%),
+    radial-gradient(circle at 20% 80%, rgba(variables.$color-tertiary-200, 0.25) 0%, rgba(variables.$color-tertiary-50, 1) 60%);
 }
 
 .cosmic-bg {
@@ -113,7 +113,7 @@
   align-items: center;
   z-index: 1;
 
-  background: linear-gradient(135deg, $color-neutral-100 0%, $color-neutral-200 100%);
+  background: linear-gradient(135deg, variables.$color-neutral-100 0%, variables.$color-neutral-200 100%);
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow:
     0 30px 70px rgba(0, 0, 0, 0.45),
@@ -152,7 +152,7 @@
 
       &__overlay {
         border-radius: 28px;
-        background-image: linear-gradient(to bottom, rgba($color-primary-100, 0.55), rgba($color-primary-50, 0.55));
+        background-image: linear-gradient(to bottom, rgba(variables.$color-primary-100, 0.55), rgba(variables.$color-primary-50, 0.55));
       }
 
       &__background {
@@ -160,7 +160,7 @@
       }
 
       &__content-container {
-        background-color: rgba($color-neutral-100, 0.9);
+        background-color: rgba(variables.$color-neutral-100, 0.9);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         border-radius: 16px;
       }
@@ -177,7 +177,7 @@
     text-align: center;
     z-index: 5;
     transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    color: $color-tertiary-900;
+    color: variables.$color-tertiary-900;
     text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
     animation: textAppear 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 
@@ -198,12 +198,12 @@
     letter-spacing: 3px;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba($color-tertiary-600, 0.3);
+    border: 1px solid rgba(variables.$color-tertiary-600, 0.3);
     border-radius: 50px;
     padding: 10px 24px;
     cursor: pointer;
     z-index: 10;
-    color: $color-primary-800;
+    color: variables.$color-primary-800;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition:
       background-color 0.3s ease,
@@ -213,11 +213,11 @@
       box-shadow 0.3s ease;
 
     &:hover {
-      background-color: rgba($color-tertiary-100, 0.9);
-      border-color: $color-tertiary-600;
-      color: $color-tertiary-900;
+      background-color: rgba(variables.$color-tertiary-100, 0.9);
+      border-color: variables.$color-tertiary-600;
+      color: variables.$color-tertiary-900;
       transform: translateY(-2px) scale(1.03);
-      box-shadow: 0 6px 20px rgba($color-tertiary-900, 0.15);
+      box-shadow: 0 6px 20px rgba(variables.$color-tertiary-900, 0.15);
     }
 
     &:active {
@@ -241,7 +241,7 @@
       pointer-events: all;
     }
 
-    background-color: $color-primary-600;
+    background-color: variables.$color-primary-600;
   }
 }
 

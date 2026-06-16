@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@use '../../../styles/variables.scss';
 
 .btn {
     display: inline-flex;
@@ -29,79 +29,79 @@
     }
 
     &--primary {
-        background-color: $color-primary-600;
-        color: $color-neutral-700;
-        border: 1px solid $color-primary-600;
+        background-color: variables.$color-primary-600;
+        color: variables.$color-neutral-700;
+        border: 1px solid variables.$color-primary-600;
 
         &:hover {
             background-color: transparent;
-            color: $color-primary-900;
+            color: variables.$color-primary-900;
         }
     }
 
     &--secondary {
-        background-color: $color-secondary-600;
+        background-color: variables.$color-secondary-600;
         color: white;
-        border: 1px solid $color-secondary-600;
+        border: 1px solid variables.$color-secondary-600;
 
         &:hover {
             background-color: transparent;
-            color: $color-secondary-600;
+            color: variables.$color-secondary-600;
         }
     }
 
     &--accent {
-        background-color: $color-accent-500;
+        background-color: variables.$color-accent-500;
         color: white;
-        border: 1px solid $color-accent-500;
+        border: 1px solid variables.$color-accent-500;
 
         &:hover {
             background-color: transparent;
-            color: $color-accent-500;
+            color: variables.$color-accent-500;
         }
     }
 
     &--outline-primary,
     &--outline {
         background-color: transparent;
-        color: $color-primary-900;
-        border: 1px solid $color-primary-900;
+        color: variables.$color-primary-900;
+        border: 1px solid variables.$color-primary-900;
 
         &:hover {
-            background-color: $color-primary-900;
+            background-color: variables.$color-primary-900;
             color: white;
         }
     }
 
     &--outline-secondary {
         background-color: transparent;
-        color: $color-secondary-600;
-        border: 1px solid $color-secondary-600;
+        color: variables.$color-secondary-600;
+        border: 1px solid variables.$color-secondary-600;
 
         &:hover {
-            background-color: $color-secondary-600;
+            background-color: variables.$color-secondary-600;
             color: white;
         }
     }
 
     &--outline-tertiary {
         background-color: transparent;
-        color: $color-tertiary-800;
-        border: 1px solid $color-tertiary-800;
+        color: variables.$color-tertiary-800;
+        border: 1px solid variables.$color-tertiary-800;
 
         &:hover {
-            background-color: $color-tertiary-800;
+            background-color: variables.$color-tertiary-800;
             color: white;
         }
     }
 
     &--outline-accent {
         background-color: transparent;
-        color: $color-accent-500;
-        border: 1px solid $color-accent-500;
+        color: variables.$color-accent-500;
+        border: 1px solid variables.$color-accent-500;
 
         &:hover {
-            background-color: $color-accent-500;
+            background-color: variables.$color-accent-500;
             color: white;
         }
     }

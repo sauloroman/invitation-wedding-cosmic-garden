@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@use '../../../styles/variables.scss';
 
 .section-header {
     display: flex;
@@ -10,11 +10,11 @@
         font-size: 1.4rem;
         font-weight: 400;
         letter-spacing: 2px;
-        color: $color-primary-900;
+        color: variables.$color-primary-900;
     }
 
     &__subtitle {
-        color: $color-primary-500;
+        color: variables.$color-primary-500;
         font-family: 'Pinyon Script', cursive;
         font-size: 2.4rem;
     }

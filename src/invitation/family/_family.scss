@@ -1,5 +1,5 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixins.scss';
+@use '../../styles/variables.scss';
+@use '../../styles/mixins.scss';
 
 .family {
     margin: 0 auto;
@@ -7,27 +7,27 @@
     position: relative;
 
     &__bg {
-        @include backgroundImage(0.25);
+        @include mixins.backgroundImage(0.25);
         bottom: -10rem;
     }
 
     &__container {
         padding: .5rem;
-        border: 1px solid $color-tertiary-500;
+        border: 1px solid variables.$color-tertiary-500;
         width: 85%;
         max-width: 440px;
         margin: 0 auto;
         margin-bottom: 5rem;
-        background-color: $color-bg;
+        background-color: variables.$color-bg;
         box-shadow:
-            0 20px 40px rgba($color-primary-900, 0.08),
+            0 20px 40px rgba(variables.$color-primary-900, 0.08),
             0 5px 15px rgba(0, 0, 0, 0.03);
     }
 
     &__content {
         padding: 2rem;
-        background-color: $color-bg;
-        border: 1px dashed $color-tertiary-500;
+        background-color: variables.$color-bg;
+        border: 1px dashed variables.$color-tertiary-500;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -46,7 +46,7 @@
             left: -10%;
             right: -10%;
             height: 1px;
-            background: linear-gradient(to right, transparent, rgba($color-tertiary-500, 0.45) 15%, rgba($color-tertiary-500, 0.45) 85%, transparent);
+            background: linear-gradient(to right, transparent, rgba(variables.$color-tertiary-500, 0.45) 15%, rgba(variables.$color-tertiary-500, 0.45) 85%, transparent);
             z-index: 0;
         }
     }
@@ -61,7 +61,7 @@
         clip-path: circle(48% at 50% 50%);
         filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.16));
         opacity: 0.9;
-        background-color: $color-bg;
+        background-color: variables.$color-bg;
     }
 
     &__parents {
@@ -86,7 +86,7 @@
             font-size: 1.25rem;
             font-weight: 600;
             letter-spacing: 2px;
-            color: $color-primary-500;
+            color: variables.$color-primary-500;
             text-transform: uppercase;
             margin: 0 0 0.6rem 0;
         }
@@ -94,7 +94,7 @@
         p {
             font-family: 'Playfair Display SC', serif;
             font-size: 1.4rem;
-            color: $color-neutral-800;
+            color: variables.$color-neutral-800;
             margin: 0;
             line-height: 1.5;
             font-weight: 400;

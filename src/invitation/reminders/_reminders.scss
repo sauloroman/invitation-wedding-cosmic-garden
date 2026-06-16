@@ -1,5 +1,5 @@
-@import '../../styles/_variables.scss';
-@import '../../styles/_mixins.scss';
+@use '../../styles/_variables.scss';
+@use '../../styles/_mixins.scss';
 
 .reminders {
     padding-top: 8rem;
@@ -14,7 +14,7 @@
 
     &__line {
         margin: 3rem auto 0;
-        @include line(5rem);
+        @include mixins.line(5rem);
     }
 }
 

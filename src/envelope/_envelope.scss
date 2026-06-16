@@ -1,3 +1,3 @@
-@import './components/EnvelopeBase/envelope-base';
-@import './components/EnvelopeFlap/envelope-flap';
-@import './components/EnvelopeSeal/envelope-seal';
+@use 'components/EnvelopeBase/envelope-base';
+@use 'components/EnvelopeFlap/envelope-flap';
+@use 'components/EnvelopeSeal/envelope-seal';

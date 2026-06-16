@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@use 'variables.scss';
 
 *,
 *::before,
@@ -15,8 +15,8 @@ html {
 
 body {
     overflow-x: hidden;
-    background-color: $color-bg;
-    color: $color-neutral-800;
+    background-color: variables.$color-bg;
+    color: variables.$color-neutral-800;
 }
 
 a {
@@ -36,7 +36,7 @@ textarea {
     border: none;
     background: transparent;
     outline: none;
-    color: $color-neutral-800;
+    color: variables.$color-neutral-800;
 }
 
 img {

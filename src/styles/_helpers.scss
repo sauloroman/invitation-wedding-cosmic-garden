@@ -1,15 +1,15 @@
-@import 'variables.scss';
+@use 'variables.scss';
 
 .text-center {
     text-align: center;
 }
 
 .text-primary {
-    color: $color-primary-500;
+    color: variables.$color-primary-500;
 }
 
 .text-secondary {
-    color: $color-secondary-500;
+    color: variables.$color-secondary-500;
 }
 
 .text-white {
@@ -17,15 +17,15 @@
 }
 
 .text-tertiary {
-    color: $color-tertiary-500;
+    color: variables.$color-tertiary-500;
 }
 
 .text-accent {
-    color: $color-accent-500;
+    color: variables.$color-accent-500;
 }
 
 .text-neutral {
-    color: $color-neutral-500;
+    color: variables.$color-neutral-500;
 }
 
 .relative-z-2 {
@@ -46,11 +46,11 @@
 }
 
 .color-secondary {
-    color: $color-secondary-500;
+    color: variables.$color-secondary-500;
 }
 
 .color-primary {
-    color: $color-primary-500;
+    color: variables.$color-primary-500;
 }
 
 .text-strong {
