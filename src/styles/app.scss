@@ -3,25 +3,3 @@
 @use '_typography.scss';
 @use '_animations.scss';
 @use '_globals.scss';
-
-// Components
-@use '../common/components/SectionHeader/_section-header.scss';
-@use '../common/components/Timer/_timer.scss';
-@use '../common/components/Button/_button.scss';
-@use '../common/components/Accordion/_accordion.scss';
-@use '../common/components/Modal/_modal.scss';
-@use '../common/components/Music/_music.scss';
-@use '../common/components/ParticleRain/_particle-rain.scss';
-@use '../envelope/envelope';
-
-// Invitation Sections
-@use '../invitation/hero/_hero.scss';
-@use '../invitation/welcome/_welcome.scss';
-@use '../invitation/message/_message.scss';
-@use '../invitation/family/_family.scss';
-@use '../invitation/countdown/_countdown.scss';
-@use '../invitation/location/_location.scss';
-@use '../invitation/reminders/_reminders.scss';
-@use '../invitation/presents/_presents.scss';
-@use '../invitation/guest/_guest.scss';
-@use '../invitation/farewell/_farewell.scss';
