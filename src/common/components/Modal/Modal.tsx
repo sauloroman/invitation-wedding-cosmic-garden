@@ -1,4 +1,5 @@
 import React from 'react'
+import './_modal.scss'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useModal } from '../../../hooks/useModal'
 

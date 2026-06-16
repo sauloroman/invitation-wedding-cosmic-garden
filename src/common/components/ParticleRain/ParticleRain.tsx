@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import './_particle-rain.scss';
 import confetti from 'canvas-confetti';
 
 interface ParticleRainProps {

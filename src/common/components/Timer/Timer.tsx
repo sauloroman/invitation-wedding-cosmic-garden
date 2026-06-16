@@ -1,4 +1,5 @@
 import React from 'react'
+import './_timer.scss'
 import { useCountdown } from '../../../hooks/useCountdown'
 import { ScrollReveal } from '../ScrollReveal/ScrollReveal'
 

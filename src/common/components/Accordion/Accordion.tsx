@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
+import './_accordion.scss'
 
 interface AccordionContextType {
     openId: string | null;

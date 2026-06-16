@@ -1,4 +1,5 @@
 import React from 'react'
+import './_section-header.scss'
 
 interface Props {
     title: string,

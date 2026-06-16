@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import './_music.scss'
 import { Button } from '../Button/Button'
 import song from '../../../assets/music/song.mp3'
 
