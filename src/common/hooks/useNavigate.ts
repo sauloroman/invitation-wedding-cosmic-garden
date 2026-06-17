@@ -5,6 +5,7 @@ export const useNavigation = () => {
 
     const navigateTo = (path: string) => {
         navigate(path)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
     return {

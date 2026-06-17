@@ -27,7 +27,7 @@ export const Guest: React.FC = () => {
                     <ScrollReveal direction="up" distance={30} duration={3.2} delay={1.6}>
                         <div className="guest__guest">
                             <span className="guest__guest-label">Invitado Especial</span>
-                            <p className="guest__guest-name">Saulo Román Santillán Nava</p>
+                            <p className="guest__guest-name">Nombre Invitado</p>
                         </div>
                     </ScrollReveal>
 

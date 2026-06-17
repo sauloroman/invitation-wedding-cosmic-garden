@@ -5,14 +5,14 @@ import { store } from './store'
 
 import { RouterApp } from './router/RouterApp'
 
-import { Music, ModalMaster } from './common/components'
+import { ModalMaster, ControlsMusic } from './common/components'
 
 export const JardinCosmicoApp: React.FC = () => {
     return (
         <Provider store={store}>
             <RouterApp />
 
-            <Music />
+            <ControlsMusic />
             <ModalMaster />
         </Provider>
     )

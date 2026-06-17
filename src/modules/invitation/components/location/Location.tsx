@@ -50,7 +50,7 @@ export const Location: React.FC = () => {
                     image={cathedral}
                     cardDirection="right"
                     cardRotate={-2}
-                    cardDelay={1.8}
+                    cardDelay={1}
                     imageDirection="left"
                     imageRotate={2}
                     imageDelay={2.8}
@@ -67,7 +67,7 @@ export const Location: React.FC = () => {
                     image={hacienda}
                     cardDirection="left"
                     cardRotate={2}
-                    cardDelay={2.2}
+                    cardDelay={1}
                     imageDirection="right"
                     imageRotate={-2}
                     imageDelay={3.2}
