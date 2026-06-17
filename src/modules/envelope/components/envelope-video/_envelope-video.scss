@@ -16,10 +16,8 @@
         left: 0;
         width: 100%;
         height: 110%;
-        /* Lo hacemos más alto para que la parte inferior se recorte */
         object-fit: cover;
         object-position: center top;
-        /* Alineado arriba para empujar el texto hacia abajo y ocultarlo */
     }
 
     &__overlay {
@@ -31,11 +29,9 @@
         background-color: $color-bg;
         z-index: 2;
         opacity: 0.6;
-        /* Un poco más de opacidad para que el texto resalte mejor */
     }
 
     &__title {
         display: none;
-        /* Ocultamos el título extra ya que la frase "Esta invitación..." es mejor */
     }
 }
