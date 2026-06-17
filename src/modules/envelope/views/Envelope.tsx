@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { Hero } from '@/modules/invitation'
 import { EnvelopeBase } from '..'
 
 import sealImage from '@/assets/images/iniciales.jpeg'
 import { useNavigation } from '@/common/hooks/useNavigate'
 import { useEnvelope } from '@/modules/envelope/hooks/useEnvelope'
+import { EnvelopeVideo } from '../components/envelope-video/EnvelopeVideo'
 
 export const Envelope: React.FC = () => {
     const { navigateTo } = useNavigation();
@@ -19,7 +19,7 @@ export const Envelope: React.FC = () => {
             onSkip={handleSkip}
             isNavigating={isNavigating}
         >
-            <Hero />
+            <EnvelopeVideo />
         </EnvelopeBase>
     )
 }

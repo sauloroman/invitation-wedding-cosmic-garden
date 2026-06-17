@@ -18,7 +18,7 @@ export const useEnvelope = ({ navigateTo }: Props) => {
 
         setTimeout(() => {
             navigateTo('/')
-        }, 3600)
+        }, 4000)
     }
 
     const handleSkip = () => {
