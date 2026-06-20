@@ -44,7 +44,7 @@ export const Guest: React.FC = () => {
 
                     <ScrollReveal direction="none" scale={0.6} duration={3.5} delay={2.8}>
                         <div className="guest__icon">
-                            <img src={flowerbases} alt="Jarrones de flores" />
+                            <img src={flowerbases} alt="Jarrones de flores" loading="lazy" />
                         </div>
                     </ScrollReveal>
                 </div>

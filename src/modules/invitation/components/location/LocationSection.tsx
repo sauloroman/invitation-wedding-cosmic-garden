@@ -51,7 +51,7 @@ export const LocationSection: React.FC<Props> = ({
 
             <ScrollReveal direction={imageDirection} distance={50} scale={1.03} rotate={imageRotate} duration={3.5} delay={imageDelay} blur={8}>
                 <div className="location__section-image opacity-75">
-                    <img src={image} alt={name} />
+                    <img src={image} alt={name} loading="lazy" />
                 </div>
             </ScrollReveal>
         </section>

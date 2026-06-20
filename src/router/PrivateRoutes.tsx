@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import { Envelope } from '@/modules/envelope'
-import { Invitation } from '@/modules/invitation'
-import { Ticket } from '@/modules/ticket'
+const Invitation = lazy(() => import('@/modules/invitation').then(m => ({ default: m.Invitation })))
+const Envelope = lazy(() => import('@/modules/envelope').then(m => ({ default: m.Envelope })))
+const Ticket = lazy(() => import('@/modules/ticket').then(m => ({ default: m.Ticket })))
 
 export const PrivateRoutes: React.FC = () => {
     return (
-        <Routes>
-            <Route path='/' element={<Invitation />} />
-            <Route path='envelope' element={<Envelope />} />
-            <Route path='ticket' element={<Ticket />} />
-        </Routes>
+        <Suspense fallback={<div className='loading-spinner'></div>}>
+            <Routes>
+                <Route path='/' element={<Invitation />} />
+                <Route path='envelope' element={<Envelope />} />
+                <Route path='ticket' element={<Ticket />} />
+            </Routes>
+        </Suspense>
     )
 }

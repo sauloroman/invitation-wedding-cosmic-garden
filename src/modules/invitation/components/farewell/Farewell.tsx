@@ -10,7 +10,7 @@ export const Farewell: React.FC = () => {
             <div className="farewell__container">
                 <ScrollReveal direction="up" distance={40} duration={3.2} delay={0.4} className="farewell__reveal">
                     <div className="farewell__image">
-                        <img src={cake} alt="Cake" />
+                        <img src={cake} alt="Cake" loading="lazy" />
                     </div>
                 </ScrollReveal>
 

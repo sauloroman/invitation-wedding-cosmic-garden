@@ -38,7 +38,7 @@ export const Family: React.FC = () => {
 
                     <ScrollReveal direction="none" scale={0.4} rotate={-45} blur={15} duration={3.5} delay={2.8}>
                         <div className='family__iconBox'>
-                            <img src={iniciales} alt="Paloma" className='family__icon' />
+                            <img src={iniciales} alt="Paloma" className='family__icon' loading="lazy" />
                         </div>
                     </ScrollReveal>
 
