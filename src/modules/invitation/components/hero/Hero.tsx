@@ -1,13 +1,13 @@
 import React from 'react'
 import './_hero.scss'
-import bgVideo from '@/assets/videos/bg-hero.mp4'
+import bg from '@/assets/images/hero.jpeg'
 import ringsImg from '@/assets/images/anillos.png'
 
 export const Hero: React.FC = () => {
     return (
         <section className='hero'>
             <div className="hero__overlay"></div>
-            <video className='hero__background' src={bgVideo} autoPlay muted loop playsInline></video>
+            <img className='hero__background' src={bg} alt="Foto de fondo" />
 
             <div className="hero__content">
                 <div className='hero__content-container'>

@@ -20,7 +20,6 @@ export const EnvelopeBase: React.FC<EnvelopeBaseProps> = ({
     onOpen,
     sealImage,
     children,
-    exclusiveText = 'Esta invitación es exclusiva para ti',
     onSkip,
     showSkip = true,
     isNavigating = false,
@@ -46,12 +45,6 @@ export const EnvelopeBase: React.FC<EnvelopeBaseProps> = ({
                 <EnvelopeFlap direction="right" isOpening={isOpening} />
                 <EnvelopeFlap direction="bottom" isOpening={isOpening} />
                 <EnvelopeFlap direction="top" isOpening={isOpening} />
-
-                {exclusiveText && (
-                    <div className={`envelop__text ${isOpening ? 'envelop__text--fade' : ''}`}>
-                        {exclusiveText}
-                    </div>
-                )}
 
                 <EnvelopeSeal
                     image={sealImage}

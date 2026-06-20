@@ -1,8 +1,3 @@
-// ----------------------------------------------------
-// Keyframes
-// ----------------------------------------------------
-
-// 1. Suave balanceo flotante continuo (péndulo/flotar)
 @keyframes float {
     0% {
         transform: translate(-50%, -55%) translateY(0);
@@ -17,7 +12,6 @@
     }
 }
 
-// 2. Revelado elegante con desenfoque al cargar (Entrada)
 @keyframes soft-reveal {
     0% {
         opacity: 0;
@@ -32,7 +26,6 @@
     }
 }
 
-// 3. Respiración orgánica / Latido lento (Continuo)
 @keyframes pulse-breath {
 
     0%,
@@ -47,22 +40,20 @@
     }
 }
 
-// 4. Brillo estelar/destello en bordes y sombras (Continuo)
 @keyframes border-shimmer {
 
     0%,
     100% {
-        border-color: #DEC5CE; // $color-accent-300
+        border-color: #DEC5CE;
         filter: drop-shadow(0 4px 12px rgba(222, 197, 206, 0.3));
     }
 
     50% {
-        border-color: #D9B5A5; // $color-tertiary-500
+        border-color: #D9B5A5;
         filter: drop-shadow(0 4px 18px rgba(217, 181, 165, 0.6));
     }
 }
 
-// 5. Desvanecimiento y subida suave (Para elementos internos escalonados)
 @keyframes fade-up-in {
     0% {
         opacity: 0;
@@ -75,10 +66,6 @@
     }
 }
 
-// ----------------------------------------------------
-// Helper classes to make swapping easy
-// ----------------------------------------------------
-
 .anim-float {
     animation: float 6s ease-in-out infinite;
 }
@@ -88,13 +75,11 @@
 }
 
 .anim-shimmer {
-    // Para shimmer combinamos la flotación con el brillo del borde
     animation:
         float 6s ease-in-out infinite,
         border-shimmer 8s ease-in-out infinite;
 }
 
-// Clase de entrada (se puede combinar con las continuas)
 .anim-reveal {
     animation: soft-reveal 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
@@ -120,5 +105,57 @@
 
     50% {
         transform: translateY(8px);
+    }
+}
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.4;
+    }
+}
+
+@keyframes cosmicEntrance {
+    0% {
+        opacity: 0;
+        transform: scale(0.1) rotate(-15deg);
+        filter: blur(15px) drop-shadow(0 0 0px rgba(197, 160, 89, 0));
+    }
+
+    50% {
+        opacity: 0.6;
+        filter: blur(8px) drop-shadow(0 0 30px rgba(197, 160, 89, 0.6));
+    }
+
+    85% {
+        opacity: 0.95;
+        transform: scale(1.05) rotate(2deg);
+        filter: blur(2px) drop-shadow(0 0 45px rgba(197, 160, 89, 0.8));
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        filter: blur(0) drop-shadow(0 0 25px rgba(197, 160, 89, 0.3));
+    }
+}
+
+@keyframes cosmicFloat {
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        filter: drop-shadow(0 0 25px rgba(197, 160, 89, 0.3));
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.02) rotate(0.5deg);
+        filter: drop-shadow(0 0 35px rgba(197, 160, 89, 0.5));
+    }
+
+    100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        filter: drop-shadow(0 0 25px rgba(197, 160, 89, 0.3));
     }
 }

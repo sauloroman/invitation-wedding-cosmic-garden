@@ -2,6 +2,10 @@ import React from 'react'
 
 export const Ticket: React.FC = () => {
     return (
-        <div>Ticket</div>
+        <div className='ticket'>
+            <div className="ticket__container">
+
+            </div>
+        </div>
     )
 }

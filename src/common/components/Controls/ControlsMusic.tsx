@@ -12,8 +12,8 @@ export const ControlsMusic: React.FC = () => {
 
     return (
         <section>
-            <Button action={() => setIsPlaying(!isPlaying)} variant="secondary" className="controls controls--music">
-                <i className={`bx ${isPlaying ? 'bx-pause' : 'bx-play'} controls__icon`} />
+            <Button action={() => setIsPlaying(!isPlaying)} variant="primary" className="controls controls--music">
+                <i className={`bx ${isPlaying ? 'bx-pause' : 'bx-music'} controls__icon`} />
             </Button>
             <audio ref={audioRef} src={song} loop />
         </section>

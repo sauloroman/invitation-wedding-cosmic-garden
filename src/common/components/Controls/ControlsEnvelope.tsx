@@ -9,7 +9,7 @@ export const ControlsEnvelope: React.FC = () => {
 
     return (
         <section>
-            <Button action={() => navigateTo('envelope')} variant="secondary" className="controls controls--envelope">
+            <Button action={() => navigateTo('envelope')} variant="primary" className="controls controls--envelope">
                 <i className='bx bx-envelope controls__icon' />
             </Button>
         </section>

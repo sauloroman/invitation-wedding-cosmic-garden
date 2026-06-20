@@ -70,14 +70,15 @@
         justify-content: center;
         align-items: center;
         z-index: 2;
-        isolation: isolate; /* Esto fuerza a que el blend-mode funcione incluso dentro de animaciones como ScrollReveal */
     }
 
     &__card-icon {
         margin-top: -1rem;
         width: 8rem;
         height: auto;
-        mix-blend-mode: darken; /* Darken suele funcionar mejor para eliminar fondos claros sin alterar tanto los colores oscuros */
+        mix-blend-mode: multiply;
+        filter: contrast(1.15) brightness(1.08);
+        opacity: 0.95;
     }
 
     &__card-content {

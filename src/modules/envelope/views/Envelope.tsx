@@ -5,7 +5,7 @@ import { EnvelopeBase } from '..'
 import sealImage from '@/assets/images/iniciales.jpeg'
 import { useNavigation } from '@/common/hooks/useNavigate'
 import { useEnvelope } from '@/modules/envelope/hooks/useEnvelope'
-import { EnvelopeVideo } from '../components/envelope-video/EnvelopeVideo'
+import { EnvelopeMedia } from '../components/envelope-media/EnvelopeMedia'
 
 export const Envelope: React.FC = () => {
     const { navigateTo } = useNavigation();
@@ -17,9 +17,10 @@ export const Envelope: React.FC = () => {
             onOpen={handleOpen}
             sealImage={sealImage}
             onSkip={handleSkip}
+            showSkip={false}
             isNavigating={isNavigating}
         >
-            <EnvelopeVideo />
+            <EnvelopeMedia />
         </EnvelopeBase>
     )
 }

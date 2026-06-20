@@ -1,5 +1,4 @@
 .envelop-container {
-  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,7 +170,7 @@
     left: 5%;
     right: 5%;
     font-family: 'Pinyon Script', cursive;
-    font-size: 3.8rem;
+    font-size: 2rem;
     text-align: center;
     z-index: 10;
     transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);

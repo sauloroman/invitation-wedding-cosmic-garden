@@ -5,33 +5,33 @@
 
     &__overlay {
         position: absolute;
-        top: -8%;
+        top: 0;
         left: 0;
         width: 100%;
         height: 108%;
-        background-image: linear-gradient(to bottom, variables.$color-primary-100, variables.$color-primary-50);
-        opacity: 0.7;
+        background-image: linear-gradient(to bottom, $color-primary-100, $color-primary-50);
+        opacity: 0.5;
         z-index: 2;
     }
 
     &__background {
         position: absolute;
-        top: -7%;
+        top: 0;
         left: 0;
         width: 100%;
         height: 107%;
         opacity: 1;
         object-fit: cover;
-        object-position: top;
+        object-position: 50% 50%;
         z-index: 1;
     }
 
-    @include mixins.difuminatedGradient();
+    // @include mixins.difuminatedGradient();
 }
 
 .hero__content {
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -55%);
     z-index: 5;
@@ -40,6 +40,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $color-bg;
+    padding: 1rem;
 
     animation:
         soft-reveal 3.0s cubic-bezier(0.25, 1, 0.5, 1) forwards,
@@ -47,24 +49,23 @@
         border-shimmer 8s ease-in-out infinite 3.0s;
 
     &-container {
-        border-radius: 10px;
         position: relative;
         width: 100%;
         box-sizing: border-box;
-        background-color: variables.$color-bg;
+        background-color: $color-bg;
         padding: 2rem;
-        border: 1px solid variables.$color-primary-300;
+        border: 1px dashed $color-tertiary-300;
 
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 3rem;
+        gap: 2rem;
     }
 
     &-message {
-        color: variables.$color-primary-500;
+        color: $color-primary-500;
         font-family: 'Pinyon Script', cursive;
-        font-size: 3rem;
+        font-size: 2.4rem;
         opacity: 0;
 
         &:first-of-type {
@@ -82,7 +83,7 @@
     letter-spacing: 3px;
     line-height: 1.1;
     font-size: 2rem;
-    color: variables.$color-primary-900;
+    color: $color-primary-900;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +93,7 @@
 }
 
 .hero__date {
-    color: variables.$color-primary-900;
+    color: $color-primary-900;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,7 +116,7 @@
 
     &-image {
         margin-top: -20px;
-        width: 7rem;
+        width: 10rem;
         object-fit: cover;
         opacity: 0;
 
@@ -138,7 +139,7 @@
         flex-direction: column;
         align-items: center;
         gap: 0.4rem;
-        color: variables.$color-primary-500;
+        color: $color-primary-500;
         font-family: 'Playfair Display SC', serif;
         font-size: 1.1rem;
         letter-spacing: 0.25rem;
@@ -149,6 +150,6 @@
 
     .hero__scroll-arrow {
         font-size: 1.8rem;
-        color: variables.$color-primary-400;
+        color: $color-primary-400;
     }
 }
