@@ -1,28 +1,77 @@
 .family {
     margin: 0 auto;
-    margin-top: 5rem;
     position: relative;
+    padding-bottom: 3rem;
 
     &__bg {
-        @include mixins.backgroundImage(0.25);
-        bottom: -10rem;
+        @include mixins.backgroundImage(0.9);
+        bottom: -8rem;
+        left: 0;
     }
 
     &__container {
         padding: .5rem;
         border: 1px solid variables.$color-tertiary-500;
-        width: 85%;
-        max-width: 440px;
+        width: 100%;
+        height: 100%;
         margin: 0 auto;
-        margin-bottom: 5rem;
         background-color: variables.$color-bg;
         box-shadow:
             0 20px 40px rgba(variables.$color-primary-900, 0.08),
             0 5px 15px rgba(0, 0, 0, 0.03);
     }
 
+    &__card-wrapper {
+        perspective: 1500px;
+        width: 85%;
+        max-width: 440px;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+        position: relative;
+    }
+
+    &__card-inner {
+        position: relative;
+        width: 100%;
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+    }
+
+    &__card-wrapper--flipped &__card-inner {
+        transform: rotateY(180deg);
+    }
+
+    &__card-front,
+    &__card-back {
+        width: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        position: relative;
+    }
+
+    &__card-front {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+
+    &__card-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        transform: rotateY(180deg);
+        height: 100%;
+
+        .family__content {
+            height: 100%;
+            justify-content: center;
+        }
+    }
+
     &__content {
-        padding: 2rem;
+        padding: 5rem 2rem;
         background-color: variables.$color-bg;
         border: 1px dashed variables.$color-tertiary-500;
         display: flex;
@@ -36,6 +85,7 @@
         align-items: center;
         justify-content: center;
         margin: 2rem 0;
+        cursor: pointer;
 
         &::before {
             content: '';
@@ -46,19 +96,48 @@
             background: linear-gradient(to right, transparent, rgba(variables.$color-tertiary-500, 0.45) 15%, rgba(variables.$color-tertiary-500, 0.45) 85%, transparent);
             z-index: 0;
         }
+
+        &:hover {
+            .family__icon {
+                transform: scale(1.08) rotate(5deg);
+                filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22));
+            }
+
+            .family__flip-hint {
+                opacity: 1;
+                transform: translate(-50%, -4px);
+            }
+        }
     }
 
     &__icon {
         position: relative;
         z-index: 1;
         margin: 0 auto;
-        width: 9rem;
-        height: 9rem;
+        width: 8rem;
+        height: 8rem;
         border-radius: 50%;
         clip-path: circle(48% at 50% 50%);
         filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.16));
         opacity: 0.9;
         background-color: variables.$color-bg;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.4s ease;
+    }
+
+    &__flip-hint {
+        position: absolute;
+        bottom: -1.8rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-family: 'Playfair Display SC', serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: variables.$color-tertiary-600;
+        opacity: 0.6;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+        text-transform: uppercase;
     }
 
     &__parents {

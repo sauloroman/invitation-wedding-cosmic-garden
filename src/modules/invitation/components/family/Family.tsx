@@ -1,56 +1,83 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './_family.scss'
 import { SectionHeader, ScrollReveal } from '@/common/components'
 import iniciales from '@/assets/images/iniciales.jpeg'
 import bg from '@/assets/images/bg-family.png'
 
 export const Family: React.FC = () => {
+    const [isFlipped, setIsFlipped] = useState(false)
+
+    const handleFlip = () => {
+        setIsFlipped(prev => !prev)
+    }
+
     return (
         <section className='family'>
             <div className='family__bg' style={{ backgroundImage: `url(${bg})` }} />
 
-            <div className="family__container">
-                <div className="family__content">
-                    <ScrollReveal direction="down" distance={40} blur={8} duration={3.0} delay={0.4}>
-                        <SectionHeader
-                            title='Familia'
-                            subtitle='Nuestros padres y padrinos'
-                            className='mb-4'
-                        />
-                    </ScrollReveal>
+            <div className={`family__card-wrapper ${isFlipped ? 'family__card-wrapper--flipped' : ''}`}>
+                <div className="family__card-inner">
 
-                    <section className='family__parents'>
-                        <ScrollReveal direction="right" distance={60} rotate={-3} duration={3.2} delay={1.2}>
-                            <div className="family__pattern">
-                                <h3 className='family__subtitle text-center'>Padres de la Novia</h3>
-                                <p className='text-center'>Irma Palos Sánchez</p>
-                                <p className='text-center'>Francisco Chávez Razgado</p>
-                            </div>
-                        </ScrollReveal>
+                    {/* FRONT SIDE - PADRES */}
+                    <div className="family__card-front family__container">
+                        <div className="family__content">
+                            <ScrollReveal direction="down" distance={20} blur={3} duration={1.0} delay={0.1}>
+                                <SectionHeader
+                                    title='Familia'
+                                    subtitle='Nuestros padres'
+                                    className='mb-4'
+                                />
+                            </ScrollReveal>
 
-                        <ScrollReveal direction="left" distance={60} rotate={3} duration={3.2} delay={2.0}>
-                            <div className="family__pattern">
-                                <h3 className='text-center'>Padres del Novio</h3>
-                                <p className='text-center'>Juana Verónica Nava Trinidad</p>
-                            </div>
-                        </ScrollReveal>
-                    </section>
+                            <section className='family__parents'>
+                                <ScrollReveal direction="right" distance={30} rotate={-2} duration={1.0} delay={0.25}>
+                                    <div className="family__pattern">
+                                        <h3 className='family__subtitle text-center'>Padres de la Novia</h3>
+                                        <p className='text-center'>Irma Palos Sánchez</p>
+                                        <p className='text-center'>Francisco Chávez Razgado</p>
+                                    </div>
+                                </ScrollReveal>
 
-                    <ScrollReveal direction="none" scale={0.4} rotate={-45} blur={15} duration={3.5} delay={2.8}>
-                        <div className='family__iconBox'>
-                            <img src={iniciales} alt="Paloma" className='family__icon' loading="lazy" />
+                                <ScrollReveal direction="left" distance={30} rotate={2} duration={1.0} delay={0.4}>
+                                    <div className="family__pattern">
+                                        <h3 className='text-center'>Padres del Novio</h3>
+                                        <p className='text-center'>Juana Verónica Nava Trinidad</p>
+                                    </div>
+                                </ScrollReveal>
+                            </section>
+
+                            <ScrollReveal direction="none" scale={0.96} rotate={-10} blur={2} duration={1.0} delay={0.55}>
+                                <div className='family__iconBox' onClick={handleFlip}>
+                                    <img src={iniciales} alt="Iniciales" className='family__icon' loading="lazy" />
+                                    <span className="family__flip-hint">Ver padrinos</span>
+                                </div>
+                            </ScrollReveal>
                         </div>
-                    </ScrollReveal>
+                    </div>
 
-                    <ScrollReveal direction="up" distance={50} rotateX={8} duration={3.2} delay={3.6}>
-                        <section className='family__godparents'>
-                            <div className="family__pattern">
-                                <h3 className='text-center'>Padrinos Principales</h3>
-                                <p className='text-center'>Efrén Luna Dueñas</p>
-                                <p className='text-center'>Aime Naheli Martínez Cortés</p>
+                    <div className="family__card-back family__container">
+                        <div className="family__content">
+                            <SectionHeader
+                                title='Familia'
+                                subtitle='Nuestros padrinos'
+                                className='mb-4'
+                            />
+
+                            <section className='family__godparents'>
+                                <div className="family__pattern">
+                                    <h3 className='text-center'>Padrinos Principales</h3>
+                                    <p className='text-center'>Efrén Luna Dueñas</p>
+                                    <p className='text-center'>Aime Naheli Martínez Cortés</p>
+                                </div>
+                            </section>
+
+                            <div className='family__iconBox' onClick={handleFlip}>
+                                <img src={iniciales} alt="Iniciales" className='family__icon' loading="lazy" />
+                                <span className="family__flip-hint">Ver padres</span>
                             </div>
-                        </section>
-                    </ScrollReveal>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
