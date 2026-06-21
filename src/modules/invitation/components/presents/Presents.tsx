@@ -17,18 +17,18 @@ export const Presents: React.FC = () => {
         <section className='presents'>
             <div className='presents__bg' style={{ backgroundImage: `url(${bg})` }} />
             <div className="presents__container">
-                <ScrollReveal direction="down" distance={40} blur={8} duration={3.0} delay={0.5}>
+                <ScrollReveal direction="down" distance={20} blur={3} duration={1.0} delay={0.1}>
                     <SectionHeader
                         title='Regalos'
                         subtitle='Lo material no es lo importante'
                     />
                 </ScrollReveal>
 
-                <ScrollReveal direction="none" scale={0.94} rotateX={6} blur={8} duration={3.5} delay={1.8}>
+                <ScrollReveal direction="none" scale={0.98} rotateX={2} blur={3} duration={1.0} delay={0.25}>
                     <p className="presents__message">Su compañía es el mejor regalo, sin embargo, si desean contribuir a nuestro nuevo hogar, les compartimos algunas opciones. </p>
                 </ScrollReveal>
 
-                <ScrollReveal direction="up" distance={70} rotateX={8} scale={0.97} duration={3.8} delay={3.0}>
+                <ScrollReveal direction="up" distance={30} rotateX={3} scale={0.99} duration={1.2} delay={0.4}>
                     <div className="presents__options">
                         <Accordion>
                             <AccordionItem

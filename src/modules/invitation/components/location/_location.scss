@@ -1,7 +1,7 @@
 .location {
-    background-color: variables.$color-primary-50;
+    background-color: $color-primary-200;
     position: relative;
-    padding: 8rem 0;
+    padding: 12rem 0;
 
     &__background {
         opacity: .8;
@@ -12,6 +12,18 @@
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        i {
+            font-size: 2rem;
+        }
     }
 
     &__container {
@@ -28,31 +40,36 @@
         p {
             font-size: 1.4rem;
             line-height: 1.8;
-            color: variables.$color-primary-800;
+            color: $color-primary-800;
         }
     }
 
-    &__line {
-        margin: 2rem auto;
-        @include mixins.line(6rem, 'bottom');
+    &__sections {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 5rem;
     }
+
+
 
     &__card {
         margin: 0 auto;
-        width: 85%;
+        width: 80%;
         padding: 2rem;
-        border: 1px solid rgba(variables.$color-tertiary-800, .6);
+        border: 1px solid rgba($color-tertiary-800, .6);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1.6rem;
-        background-color: variables.$color-bg;
+        background-color: $color-bg;
         opacity: .9;
         text-align: center;
-        @include mixins.folded-corners(4rem, 'top-right');
+        @include mixins.folded-corners(2rem, 'both');
 
         &-type {
-            color: variables.$color-secondary-500;
+            color: $color-secondary-500;
             font-family: 'Pinyon Script', cursive;
             font-size: 2.4rem;
         }
@@ -65,13 +82,13 @@
 
         &-address {
             font-size: 1.6rem;
-            color: variables.$color-neutral-700;
+            color: $color-neutral-700;
         }
 
         &-hour {
             font-size: 3rem;
             font-weight: 400;
-            color: variables.$color-tertiary-800;
+            color: $color-tertiary-800;
         }
 
         &-button {
@@ -85,17 +102,6 @@
 
     }
 
-    &__section {
-        &-image {
-            margin: 3rem auto;
-            max-width: 50%;
-            height: auto;
 
-            img {
-                opacity: .6;
-            }
-        }
-
-    }
 
 }
