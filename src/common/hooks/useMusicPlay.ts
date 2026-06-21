@@ -1,25 +1,70 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import type { RootState } from "@/store"
+import { pauseMusic, playMusic } from "@/store/ui/music.slice"
+import song from '@/assets/music/song.mp3'
+
+const audioInstance = new Audio(song)
+audioInstance.loop = true
 
 export const useMusicPlay = () => {
-    const [isPlaying, setIsPlaying] = useState<boolean>(true)
-    const audioRef = useRef<HTMLAudioElement | null>(null)
+    const dispatch = useDispatch()
+    const { isPlaying } = useSelector((state: RootState) => state.music)
+    const [currentTime, setCurrentTime] = useState(0)
+    const [duration, setDuration] = useState(0)
 
     useEffect(() => {
-        if (!audioRef.current) return
-
         if (isPlaying) {
-            audioRef.current.play().catch(err => {
+            audioInstance.play().catch(err => {
                 console.log('Playback prevented by browser autoplay policy:', err)
-                setIsPlaying(false)
+                dispatch(pauseMusic())
             })
         } else {
-            audioRef.current.pause()
+            audioInstance.pause()
         }
-    }, [isPlaying])
+    }, [isPlaying, dispatch])
+
+    useEffect(() => {
+        const handleTimeUpdate = () => {
+            setCurrentTime(audioInstance.currentTime)
+        }
+        const handleLoadedMetadata = () => {
+            setDuration(audioInstance.duration || 0)
+        }
+
+        if (audioInstance.duration) {
+            setDuration(audioInstance.duration)
+        }
+        setCurrentTime(audioInstance.currentTime)
+
+        audioInstance.addEventListener('timeupdate', handleTimeUpdate)
+        audioInstance.addEventListener('loadedmetadata', handleLoadedMetadata)
+
+        return () => {
+            audioInstance.removeEventListener('timeupdate', handleTimeUpdate)
+            audioInstance.removeEventListener('loadedmetadata', handleLoadedMetadata)
+        }
+    }, [])
+
+    const seek = (time: number) => {
+        audioInstance.currentTime = time
+        setCurrentTime(time)
+    }
+
+    const setIsPlaying = (value: boolean | ((prev: boolean) => boolean)) => {
+        const nextValue = typeof value === 'function' ? value(isPlaying) : value
+        if (nextValue) {
+            dispatch(playMusic())
+        } else {
+            dispatch(pauseMusic())
+        }
+    }
 
     return {
         isPlaying,
         setIsPlaying,
-        audioRef
+        currentTime,
+        duration,
+        seek
     }
 }

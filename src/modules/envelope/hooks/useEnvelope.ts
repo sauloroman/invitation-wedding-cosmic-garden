@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { playMusic } from "@/store/ui/music.slice"
 
 interface Props {
     navigateTo: (path: string) => void
@@ -6,10 +8,12 @@ interface Props {
 
 export const useEnvelope = ({ navigateTo }: Props) => {
     const [isOpening, setIsOpening] = useState(false)
+    const dispatch = useDispatch()
 
     const handleOpen = () => {
         if (isOpening) return
         setIsOpening(true)
+        dispatch(playMusic())
 
         setTimeout(() => {
             navigateTo('/')
@@ -17,6 +21,7 @@ export const useEnvelope = ({ navigateTo }: Props) => {
     }
 
     const handleSkip = () => {
+        dispatch(playMusic())
         navigateTo('/')
     }
 
