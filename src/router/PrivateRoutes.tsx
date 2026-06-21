@@ -1,11 +1,20 @@
 import React, { Suspense, lazy } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import { Menu } from '@/common/components/Menu/Menu'
+import { MenuButton } from '@/common/components/Menu/MenuButton'
+
+import { useMusicPlay } from '@/common/hooks/useMusicPlay'
 
 const Invitation = lazy(() => import('@/modules/invitation').then(m => ({ default: m.Invitation })))
 const Envelope = lazy(() => import('@/modules/envelope').then(m => ({ default: m.Envelope })))
 const Ticket = lazy(() => import('@/modules/ticket').then(m => ({ default: m.Ticket })))
 
 export const PrivateRoutes: React.FC = () => {
+    const { pathname } = useLocation()
+    const showMenu = !['/envelope', '/ticket'].includes(pathname)
+
+    useMusicPlay()
+
     return (
         <Suspense fallback={<div className='loading-spinner'></div>}>
             <Routes>
@@ -13,6 +22,13 @@ export const PrivateRoutes: React.FC = () => {
                 <Route path='envelope' element={<Envelope />} />
                 <Route path='ticket' element={<Ticket />} />
             </Routes>
+            {showMenu && (
+                <>
+                    <Menu />
+                    <MenuButton />
+                </>
+            )}
         </Suspense>
     )
 }
+

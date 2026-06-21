@@ -1,0 +1,241 @@
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: opacity 0.4s ease;
+
+    &--open {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &--close {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: rgba($color-bg, 0.96);
+    backdrop-filter: blur(12px);
+    border-left: 1px solid rgba($color-tertiary-300, 0.3);
+    z-index: 1001;
+    padding: 3rem 2rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+
+    &--open {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &--close {
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4rem;
+        border-bottom: 1px solid rgba($color-tertiary-300, 0.2);
+        padding-bottom: 1.5rem;
+    }
+
+    &__title {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: $color-primary-900;
+        text-transform: uppercase;
+    }
+
+    &__icon {
+        font-size: 2.8rem;
+        color: $color-tertiary-600;
+        cursor: pointer;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            transform: rotate(90deg) scale(1.1);
+            color: $color-tertiary-800;
+        }
+    }
+
+    &__nav {
+        flex: 1;
+    }
+
+    &__routes {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+        width: 100%;
+        padding: 1.2rem 2rem;
+        border-radius: 30px;
+        font-family: 'Playfair Display SC', serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+        i {
+            font-size: 1.8rem;
+        }
+
+        &--envelope {
+            background-color: transparent;
+            color: $color-tertiary-800;
+            border: 1px solid rgba($color-tertiary-800, 0.6);
+
+            &:hover {
+                background-color: $color-tertiary-800;
+                color: $color-bg;
+                border-color: $color-tertiary-800;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba($color-tertiary-800, 0.25);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+
+        &--ticket {
+            background-color: $color-primary-600;
+            color: $color-bg;
+            border: 1px solid $color-primary-600;
+
+            &:hover {
+                background-color: transparent;
+                color: $color-primary-900;
+                border-color: $color-primary-900;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba($color-primary-900, 0.15);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__divider-horizontal {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba($color-tertiary-300, 0.4), transparent);
+        margin: 2.2rem 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        padding: 1.2rem 1.6rem;
+        border-radius: 8px;
+        cursor: pointer;
+        color: $color-neutral-800;
+        transition: all 0.3s ease;
+
+        &-icon {
+            font-size: 2rem;
+            color: $color-tertiary-600;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        span {
+            font-family: 'Playfair Display SC', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background-color: rgba($color-primary-200, 0.4);
+            color: $color-primary-900;
+            transform: translateX(5px);
+
+            .menu__item-icon {
+                color: $color-primary-800;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.menu-button {
+    transition: all .3s ease;
+    position: fixed;
+    top: 3%;
+    left: 5%;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: rgba($color-tertiary-800, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-bg;
+    border: 1px solid rgba($color-tertiary-300, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: $color-tertiary-700;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    &--hidden {
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.3) rotate(-90deg);
+    }
+
+    &__icon {
+        font-size: 1.8rem;
+    }
+}
