@@ -29,14 +29,14 @@
 
 }
 
-@mixin line($height, $circlePosition: 'bottom') {
+@mixin line($height, $circlePosition: 'bottom', $showCircle: true) {
     width: 2px;
     height: $height;
     opacity: .4;
     background-color: rgba(variables.$color-tertiary-800, .5);
     position: relative;
 
-    @if($circlePosition =='bottom') {
+    @if($circlePosition =='bottom' and $showCircle) {
         &::after {
             content: '';
             width: 8px;
@@ -50,7 +50,7 @@
         }
     }
 
-    @if($circlePosition =='top') {
+    @if($circlePosition =='top' and $showCircle) {
         &::before {
             content: '';
             width: 8px;

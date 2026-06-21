@@ -1,12 +1,27 @@
 .message {
 
     position: relative;
-    padding-top: 5rem;
+    margin: 0 auto;
+    width: 85%;
+    padding: 10rem 0;
+    padding-bottom: 5rem;
+
+    &__bg {
+        position: absolute;
+        top: -15%;
+        z-index: -1;
+        right: -9%;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: .9;
+    }
 
     &__content {
         text-align: center;
-        padding: 5rem;
-        background-color: variables.$color-primary-50;
+        padding: 4rem 2rem;
+        background-color: $color-primary-200;
     }
 
     &__line {
@@ -15,13 +30,20 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        @include mixins.line(6rem, 'bottom');
+
+        &--top {
+            @include mixins.line(6.5rem, 'top', false);
+        }
+
+        &--bottom {
+            @include mixins.line(6.5rem, 'bottom', false);
+        }
     }
 
     &__text {
         font-size: 1.4rem;
         line-height: 1.8;
-        color: variables.$color-primary-800;
+        color: $color-primary-800;
         max-width: 65rem;
         margin: 2.5rem auto 0;
         font-weight: 400;
@@ -30,7 +52,7 @@
 
     &__icon {
         font-size: 2.4rem;
-        color: variables.$color-primary-400;
+        color: $color-primary-400;
     }
 
     &__container {
@@ -42,12 +64,8 @@
         margin: 0 auto;
         aspect-ratio: 1 / 1;
         border: none;
-        background-color: variables.$color-bg;
-
-        @include mixins.difuminatedGradient($color: variables.$color-bg,
-            $height: 35%,
-            $positionY: 0,
-            $double: true);
+        background-color: $color-bg;
+        border: 1px solid $color-tertiary-500;
     }
 
     &__video {
@@ -56,6 +74,6 @@
         height: 100%;
         object-fit: cover;
         transition: all 2s ease-out;
-        opacity: .4;
+        opacity: .8;
     }
 }

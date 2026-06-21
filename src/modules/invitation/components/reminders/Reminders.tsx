@@ -3,14 +3,16 @@ import React from 'react'
 import { SectionHeader, ScrollReveal } from '@/common/components'
 
 import dressIcon from '@/assets/images/dress-icon.png'
+import bdAdd from '@/assets/images/bg-add.jpeg'
 
 import './_reminders.scss'
 
 export const Reminders: React.FC = () => {
     return (
         <section className="reminders">
+            <div className="reminders__bg" style={{ backgroundImage: `url(${bdAdd})` }}></div>
             <div className="reminders__container">
-                <ScrollReveal direction="right" distance={55} rotate={-3} duration={3.5} delay={0.6}>
+                <ScrollReveal direction="right" distance={30} rotate={-2} duration={1.2} delay={0.15}>
                     <div className="reminder">
                         <div className="reminder__header">
                             <SectionHeader
@@ -40,7 +42,7 @@ export const Reminders: React.FC = () => {
                     </div>
                 </ScrollReveal>
 
-                <ScrollReveal direction="left" distance={55} rotate={3} duration={3.5} delay={1.8}>
+                <ScrollReveal direction="left" distance={30} rotate={2} duration={1.2} delay={0.3}>
                     <div className="reminder">
                         <div className="reminder__header">
                             <SectionHeader

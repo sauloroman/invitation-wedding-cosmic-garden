@@ -1,6 +1,6 @@
 .welcome {
 
-    background-color: variables.$color-primary-50;
+    background-color: $color-primary-200;
     padding: 5rem 0;
 
     &__container {
@@ -15,5 +15,6 @@
     &__message {
         width: 90%;
         margin-top: 1rem;
+        color: $color-neutral-800;
     }
 }

@@ -4,6 +4,7 @@ import { useInView } from 'framer-motion'
 import { ScrollReveal } from '@/common/components'
 
 import pedirMano from '@/assets/videos/peticion.mp4'
+import bg from '@/assets/images/bg-message.jpeg'
 
 import './_message.scss'
 
@@ -13,9 +14,10 @@ export const Message: React.FC = () => {
 
     return (
         <section className='message' ref={containerRef}>
-            <ScrollReveal direction="up" distance={60} rotateX={-7} scale={0.96} blur={12} duration={3.5} delay={0.6}>
+            <div className="message__bg" style={{ backgroundImage: `url(${bg})` }}></div>
+            <div className="message__line message__line--bottom"></div>
+            <ScrollReveal direction="up" distance={30} rotateX={-3} scale={0.98} blur={4} duration={1.2} delay={0.1}>
                 <section className='message__container'>
-                    <div className="message__overall"></div>
                     {isInView ? (
                         <video
                             autoPlay
@@ -31,12 +33,13 @@ export const Message: React.FC = () => {
                 </section>
             </ScrollReveal>
 
-            <ScrollReveal direction='down' distance={60} rotateY={7} blur={6} duration={2.0} delay={2.0}>
+            <ScrollReveal direction='down' distance={30} rotateY={3} blur={3} duration={1.0} delay={0.3}>
                 <div className="message__content">
                     <i className="bxf bx-heart message__icon"></i>
                     <p>Prometo cuidarte, respetarte, valorarte y amarte todos los días de mi vida.</p>
                 </div>
             </ScrollReveal>
+            <div className="message__line message__line--top"></div>
         </section>
     )
 }
