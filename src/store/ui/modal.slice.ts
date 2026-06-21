@@ -11,13 +11,15 @@ export type ModalName = typeof MODAL_NAMES[keyof typeof MODAL_NAMES];
 interface ModalState {
     isOpen: boolean,
     modalTitle: string,
-    modalName: ModalName
+    modalName: ModalName,
+    modalContent: string,
 }
 
 const initialState: ModalState = {
     isOpen: false,
     modalTitle: '',
     modalName: MODAL_NAMES.none,
+    modalContent: '',
 }
 
 const modalSlice = createSlice({
@@ -35,9 +37,13 @@ const modalSlice = createSlice({
             state.isOpen = false;
             state.modalTitle = ''
             state.modalName = MODAL_NAMES.none
+        },
+
+        setModalContent: (state, { payload }: PayloadAction<string>) => {
+            state.modalContent = payload;
         }
     }
 })
 
-export const { openModal, closeModal } = modalSlice.actions
+export const { openModal, closeModal, setModalContent } = modalSlice.actions
 export default modalSlice.reducer

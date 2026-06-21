@@ -1,9 +1,18 @@
 import React from 'react'
+import { useModal } from '@/common/hooks/useModal'
+import { MODAL_NAMES } from '@/store/ui/modal.slice'
 
 export const TicketBody: React.FC = () => {
+    const { actions: { onSetModalContent, openModal } } = useModal()
+
+    const onShowQrImage = (url: string) => {
+        onSetModalContent(url);
+        openModal('Boleto', MODAL_NAMES.ticket);
+    }
+
     return (
         <div className="ticket__body">
-            <div className="ticket__qr-container">
+            <div className="ticket__qr-container" onClick={() => onShowQrImage('https://res.cloudinary.com/dlamufioy/image/upload/v1721928481/abrasa/tickets/668ef7df71dd4f0b19328c41/hfaiszv4t8c2incaazeu.png')}>
                 <div className="ticket__qr-box">
                     <img src="https://res.cloudinary.com/dlamufioy/image/upload/v1721928481/abrasa/tickets/668ef7df71dd4f0b19328c41/hfaiszv4t8c2incaazeu.png" alt="Código QR del boleto" className="ticket__qr-image" />
                 </div>
