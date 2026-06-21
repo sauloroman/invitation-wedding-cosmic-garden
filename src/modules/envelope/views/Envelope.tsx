@@ -9,7 +9,7 @@ import { EnvelopeMedia } from '../components/envelope-media/EnvelopeMedia'
 
 export const Envelope: React.FC = () => {
     const { navigateTo } = useNavigation();
-    const { isOpening, isNavigating, handleOpen, handleSkip } = useEnvelope({ navigateTo })
+    const { isOpening, handleOpen, handleSkip } = useEnvelope({ navigateTo })
 
     return (
         <EnvelopeBase
@@ -18,7 +18,6 @@ export const Envelope: React.FC = () => {
             sealImage={sealImage}
             onSkip={handleSkip}
             showSkip={false}
-            isNavigating={isNavigating}
         >
             <EnvelopeMedia />
         </EnvelopeBase>

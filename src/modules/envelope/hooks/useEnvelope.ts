@@ -6,31 +6,22 @@ interface Props {
 
 export const useEnvelope = ({ navigateTo }: Props) => {
     const [isOpening, setIsOpening] = useState(false)
-    const [isNavigating, setIsNavigating] = useState(false)
 
     const handleOpen = () => {
         if (isOpening) return
         setIsOpening(true)
 
         setTimeout(() => {
-            setIsNavigating(true)
-        }, 2800)
-
-        setTimeout(() => {
             navigateTo('/')
-        }, 4000)
+        }, 2500)
     }
 
     const handleSkip = () => {
-        setIsNavigating(true)
-        setTimeout(() => {
-            navigateTo('/')
-        }, 500)
+        navigateTo('/')
     }
 
     return {
         isOpening,
-        isNavigating,
 
         handleOpen,
         handleSkip

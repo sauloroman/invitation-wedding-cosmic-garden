@@ -11,7 +11,6 @@ export interface EnvelopeBaseProps {
     exclusiveText?: string;
     onSkip?: () => void;
     showSkip?: boolean;
-    isNavigating?: boolean;
     envelopeClass?: string;
 }
 
@@ -22,7 +21,6 @@ export const EnvelopeBase: React.FC<EnvelopeBaseProps> = ({
     children,
     onSkip,
     showSkip = true,
-    isNavigating = false,
     envelopeClass = ''
 }) => {
     return (
@@ -57,8 +55,6 @@ export const EnvelopeBase: React.FC<EnvelopeBaseProps> = ({
                         SALTAR →
                     </button>
                 )}
-
-                <div className={`envelop__overlay ${isNavigating ? 'envelop__overlay--active' : ''}`} />
             </div>
         </div>
     )
