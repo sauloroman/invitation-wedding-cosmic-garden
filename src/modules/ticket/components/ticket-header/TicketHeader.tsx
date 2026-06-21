@@ -3,11 +3,6 @@ import React from 'react'
 export const TicketHeader: React.FC = () => {
     return (
         <header className="ticket__header">
-            <div className="ticket__folio">
-                <span>FOLIO:</span>
-                <strong>ME-180726-08</strong>
-            </div>
-            
             <div className="ticket__event-title">
                 <span className="ticket__event-subtitle">Enlace Matrimonial</span>
                 <h2 className="ticket__couple-names">
@@ -20,15 +15,7 @@ export const TicketHeader: React.FC = () => {
                     <i className="bx bx-calendar-event ticket__detail-icon" />
                     <div className="ticket__detail-text">
                         <span className="ticket__detail-label">Fecha</span>
-                        <span className="ticket__detail-value">Sábado, 18 de Julio de 2026</span>
-                    </div>
-                </div>
-
-                <div className="ticket__detail-item">
-                    <i className="bx bx-time ticket__detail-icon" />
-                    <div className="ticket__detail-text">
-                        <span className="ticket__detail-label">Horario Recepción</span>
-                        <span className="ticket__detail-value">09:00 P.M.</span>
+                        <span className="ticket__detail-value">18 de Julio de 2026 &mdash; 09:00 P.M.</span>
                     </div>
                 </div>
 

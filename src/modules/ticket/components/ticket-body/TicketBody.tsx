@@ -1,14 +1,12 @@
 import React from 'react'
-import qrCode from '@/assets/images/qr-code.png'
 
 export const TicketBody: React.FC = () => {
     return (
         <div className="ticket__body">
             <div className="ticket__qr-container">
                 <div className="ticket__qr-box">
-                    <img src={qrCode} alt="Código QR del boleto" className="ticket__qr-image" />
+                    <img src="https://res.cloudinary.com/dlamufioy/image/upload/v1721928481/abrasa/tickets/668ef7df71dd4f0b19328c41/hfaiszv4t8c2incaazeu.png" alt="Código QR del boleto" className="ticket__qr-image" />
                 </div>
-                <span className="ticket__qr-caption">Presenta este código al ingresar</span>
             </div>
 
             <div className="ticket__guest-info">

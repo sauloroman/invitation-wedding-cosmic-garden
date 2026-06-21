@@ -1,5 +1,4 @@
 .ticket {
-    $gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3e7c4 30%, #ad8540 50%, #f3e7c4 70%, #b89752 100%);
     height: 100dvh;
     width: 100dvw;
     box-sizing: border-box;
@@ -10,11 +9,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-
-    background-color: $color-neutral-50;
-    background-image:
-        radial-gradient(circle at 50% 30%, rgba($color-primary-200, 0.4) 0%, rgba($color-primary-50, 1) 70%),
-        radial-gradient(circle at 20% 80%, rgba($color-tertiary-200, 0.25) 0%, rgba($color-tertiary-50, 1) 60%);
+    background-color: $color-primary-50;
 
     &__back-btn {
         position: absolute;
@@ -83,25 +78,6 @@
         width: 100%;
     }
 
-    &__folio {
-        font-family: 'Playfair Display SC', serif;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        color: $color-tertiary-600;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        border-bottom: none;
-        padding-bottom: 0;
-        margin-bottom: 2rem;
-
-        span {
-            font-weight: 400;
-            color: $color-tertiary-600;
-        }
-    }
-
     &__event-title {
         display: flex;
         flex-direction: column;
@@ -112,7 +88,7 @@
 
     &__event-subtitle {
         font-family: 'Playfair Display SC', serif;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         font-weight: 600;
         letter-spacing: 3px;
         color: $color-tertiary-600;
@@ -121,7 +97,7 @@
 
     &__couple-names {
         font-family: 'Playfair Display', 'Playfair Display SC', serif;
-        font-size: 2.6rem;
+        font-size: 2.4rem;
         font-weight: 700;
         color: $color-primary-900;
         margin: 0.4rem 0 0 0;
@@ -153,7 +129,7 @@
     }
 
     &__detail-icon {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         color: $color-tertiary-600;
         margin-top: 0.2rem;
         flex-shrink: 0;
@@ -167,7 +143,7 @@
 
     &__detail-label {
         font-family: 'Playfair Display SC', serif;
-        font-size: 0.7rem;
+        font-size: 1.2rem;
         font-weight: 700;
         letter-spacing: 1px;
         color: $color-tertiary-500;
@@ -176,15 +152,14 @@
 
     &__detail-value {
         font-family: 'Playfair Display SC', serif;
-        font-size: 0.92rem;
-        font-weight: 700;
+        font-size: 1.4rem;
         color: $color-primary-900;
         line-height: 1.2;
         text-transform: uppercase;
     }
 
     &__detail-subvalue {
-        font-size: 0.72rem;
+        font-size: 1.2rem;
         color: $color-neutral-600;
         line-height: 1.35;
         text-transform: uppercase;
@@ -197,7 +172,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 1.5rem -1.2rem;
+        margin: 1.5rem -1.8rem;
     }
 
     &__notch {
@@ -205,8 +180,8 @@
         width: 24px;
         height: 24px;
         border-radius: 50%;
-        background-color: $color-neutral-50;
-        border: 1px solid rgba(#c5a059, 0.35);
+        background-color: $color-primary-50;
+        border: 1px solid $color-tertiary-200;
         z-index: 3;
 
         &--left {
@@ -245,7 +220,7 @@
         background-color: $color-surface;
         border: 1px solid rgba($color-neutral-300, 0.4);
         border-radius: 12px;
-        padding: 1.2rem;
+        padding: .5rem;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
         display: flex;
         justify-content: center;
@@ -253,8 +228,8 @@
     }
 
     &__qr-image {
-        width: 130px;
-        height: 130px;
+        width: 18rem;
+        height: 18rem;
         display: block;
     }
 
@@ -279,7 +254,7 @@
 
     &__guest-label {
         font-family: 'Playfair Display SC', serif;
-        font-size: 0.72rem;
+        font-size: 1.2rem;
         color: $color-tertiary-500;
         letter-spacing: 1.5px;
         text-transform: uppercase;
@@ -287,9 +262,8 @@
     }
 
     &__guest-name {
-        font-family: 'Playfair Display SC', serif;
+        font-family: 'Playfair Display', serif;
         font-size: 1.4rem;
-        font-weight: 700;
         color: $color-primary-900;
         margin: 0;
         letter-spacing: 0.5px;
@@ -332,7 +306,7 @@
 
     &__pass-count {
         font-family: 'Playfair Display SC', serif;
-        font-size: 1.4rem;
+        font-size: 2.4rem;
         font-weight: 700;
         color: $color-primary-900;
 
@@ -343,7 +317,7 @@
 
     &__pass-label {
         font-family: 'Playfair Display SC', serif;
-        font-size: 0.7rem;
+        font-size: 1.2rem;
         font-weight: 700;
         letter-spacing: 0.5px;
         color: $color-tertiary-600;
@@ -352,5 +326,30 @@
         .ticket__pass-card--table & {
             color: $color-primary-600;
         }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.8rem 0.5rem;
+        box-sizing: border-box;
+    }
+
+    &__footer-label {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: $color-tertiary-600;
+    }
+
+    &__footer-number {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #d32f2f;
+        letter-spacing: 1.5px;
     }
 }
