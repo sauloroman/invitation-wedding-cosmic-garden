@@ -1,6 +1,5 @@
 import React from 'react'
 import { Hero, Countdown, Welcome, Guest, Message, Family, Location, Reminders, Presents, Itinerary, Farewell } from '..'
-import { ControlsEnvelope } from '@/common/components'
 
 export const Invitation: React.FC = () => {
     return (
@@ -18,7 +17,6 @@ export const Invitation: React.FC = () => {
                 <Itinerary />
                 <Farewell />
             </div>
-            <ControlsEnvelope />
         </>
     )
 }

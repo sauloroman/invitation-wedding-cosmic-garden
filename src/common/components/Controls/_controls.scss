@@ -5,6 +5,9 @@
     padding: 1rem;
     box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.25);
     bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &--music {
         left: 2rem;

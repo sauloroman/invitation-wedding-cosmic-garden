@@ -44,7 +44,7 @@
     padding: 8rem 2rem;
 
     &__bg {
-        @include mixins.backgroundImage(0.45);
+        @include mixins.backgroundImage(0.99);
         z-index: 1;
         pointer-events: none;
     }
