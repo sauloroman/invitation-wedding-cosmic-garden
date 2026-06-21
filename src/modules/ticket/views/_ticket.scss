@@ -1,6 +1,5 @@
-$gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3e7c4 30%, #ad8540 50%, #f3e7c4 70%, #b89752 100%);
-
 .ticket {
+    $gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3e7c4 30%, #ad8540 50%, #f3e7c4 70%, #b89752 100%);
     height: 100dvh;
     width: 100dvw;
     box-sizing: border-box;
@@ -14,8 +13,8 @@ $gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3e7c4 30%, #ad8540 50%, #f
 
     background-color: $color-neutral-50;
     background-image:
-      radial-gradient(circle at 50% 30%, rgba($color-primary-200, 0.4) 0%, rgba($color-primary-50, 1) 70%),
-      radial-gradient(circle at 20% 80%, rgba($color-tertiary-200, 0.25) 0%, rgba($color-tertiary-50, 1) 60%);
+        radial-gradient(circle at 50% 30%, rgba($color-primary-200, 0.4) 0%, rgba($color-primary-50, 1) 70%),
+        radial-gradient(circle at 20% 80%, rgba($color-tertiary-200, 0.25) 0%, rgba($color-tertiary-50, 1) 60%);
 
     &__back-btn {
         position: absolute;
@@ -51,14 +50,14 @@ $gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3e7c4 30%, #ad8540 50%, #f
     &__container {
         background-color: $color-bg;
         box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
-        padding: 1.5rem;
+        padding: 0.8rem;
         height: 100%;
         width: 100%;
-        max-width: 380px;
-        max-height: 680px;
+        max-width: 360px;
+        max-height: 720px;
         box-sizing: border-box;
-        border-radius: 12px;
-        border: 1px solid rgba($color-tertiary-300, 0.5);
+        border-radius: 16px;
+        border: 1px solid rgba($color-neutral-300, 0.5);
         position: relative;
         z-index: 2;
         animation: fade-up-in 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -67,13 +66,13 @@ $gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3e7c4 30%, #ad8540 50%, #f
     &__content {
         border: 1px solid rgba(#c5a059, 0.35);
         height: 100%;
-        padding: 1.5rem 1rem;
+        padding: 2rem 1.2rem 1.5rem 1.2rem;
         box-sizing: border-box;
-        border-radius: 6px;
+        border-radius: 12px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(253, 252, 250, 0.3) 100%);
+        background-color: #faf6ec;
     }
 
     &__header {
@@ -81,6 +80,115 @@ $gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3e7c4 30%, #ad8540 50%, #f
         flex-direction: column;
         align-items: center;
         text-align: center;
+        width: 100%;
+    }
+
+    &__folio {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: $color-tertiary-600;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 2rem;
+
+        span {
+            font-weight: 400;
+            color: $color-tertiary-600;
+        }
+    }
+
+    &__event-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 1.8rem;
+    }
+
+    &__event-subtitle {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: $color-tertiary-600;
+        text-transform: uppercase;
+    }
+
+    &__couple-names {
+        font-family: 'Playfair Display', 'Playfair Display SC', serif;
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: $color-primary-900;
+        margin: 0.4rem 0 0 0;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+    }
+
+    &__amp {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 400;
+        color: $color-primary-900;
+    }
+
+    &__event-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    &__detail-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    &__detail-icon {
+        font-size: 1.4rem;
+        color: $color-tertiary-600;
+        margin-top: 0.2rem;
+        flex-shrink: 0;
+    }
+
+    &__detail-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+
+    &__detail-label {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: $color-tertiary-500;
+        text-transform: uppercase;
+    }
+
+    &__detail-value {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: $color-primary-900;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    &__detail-subvalue {
+        font-size: 0.72rem;
+        color: $color-neutral-600;
+        line-height: 1.35;
+        text-transform: uppercase;
+        margin-top: 0.2rem;
     }
 
     &__divider {
@@ -89,7 +197,7 @@ $gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3e7c4 30%, #ad8540 50%, #f
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 10px -2.5rem;
+        margin: 1.5rem -1.2rem;
     }
 
     &__notch {
@@ -98,27 +206,22 @@ $gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3e7c4 30%, #ad8540 50%, #f
         height: 24px;
         border-radius: 50%;
         background-color: $color-neutral-50;
-        background-image:
-          radial-gradient(circle at center, rgba($color-primary-200, 0.1) 0%, rgba($color-primary-50, 0.1) 70%);
-        border: 1px solid rgba($color-tertiary-300, 0.4);
-        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(#c5a059, 0.35);
         z-index: 3;
 
         &--left {
             left: -12px;
-            transform: rotate(90deg);
         }
 
         &--right {
             right: -12px;
-            transform: rotate(-90deg);
         }
     }
 
     &__dashed-line {
         width: 100%;
         height: 0;
-        border-top: 1.5px dashed rgba(#c5a059, 0.4);
+        border-top: 1.5px dashed rgba(#c5a059, 0.45);
         z-index: 1;
     }
 
@@ -126,14 +229,128 @@ $gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3e7c4 30%, #ad8540 50%, #f
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        padding: 0.5rem 0;
+        width: 100%;
+        padding: 0.5rem 0 0 0;
+        gap: 1.2rem;
     }
 
-    &__footer {
+    &__qr-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 0.8rem;
+    }
+
+    &__qr-box {
+        background-color: $color-surface;
+        border: 1px solid rgba($color-neutral-300, 0.4);
+        border-radius: 12px;
+        padding: 1.2rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__qr-image {
+        width: 130px;
+        height: 130px;
+        display: block;
+    }
+
+    &__qr-caption {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 0.72rem;
+        color: $color-tertiary-500;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-top: 0.4rem;
+    }
+
+    &__guest-info {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        margin-top: 0.5rem;
+    }
+
+    &__guest-label {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 0.72rem;
+        color: $color-tertiary-500;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &__guest-name {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-primary-900;
+        margin: 0;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    &__passes-info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 0.8rem;
+        margin-top: 0.4rem;
+    }
+
+    &__pass-card {
+        flex: 1;
+        background: $color-surface;
+        border: 1px solid rgba($color-neutral-300, 0.5);
+        border-radius: 10px;
+        padding: 0.8rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+        transition: transform 0.2s, border-color 0.2s;
+
+        &:hover {
+            border-color: $color-tertiary-400;
+            transform: translateY(-2px);
+        }
+
+        &--table {
+            border: 1px solid rgba($color-primary-300, 0.6);
+
+            &:hover {
+                border-color: $color-primary-500;
+            }
+        }
+    }
+
+    &__pass-count {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-primary-900;
+
+        .ticket__pass-card--table & {
+            color: $color-primary-700;
+        }
+    }
+
+    &__pass-label {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: $color-tertiary-600;
+        text-transform: uppercase;
+
+        .ticket__pass-card--table & {
+            color: $color-primary-600;
+        }
     }
 }

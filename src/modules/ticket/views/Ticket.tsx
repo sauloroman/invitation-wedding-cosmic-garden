@@ -1,5 +1,7 @@
 import React from 'react'
 import { useNavigation } from '@/common/hooks/useNavigate'
+import { TicketHeader } from '../components/ticket-header/TicketHeader'
+import { TicketBody } from '../components/ticket-body/TicketBody'
 import './_ticket.scss'
 
 export const Ticket: React.FC = () => {
@@ -13,9 +15,7 @@ export const Ticket: React.FC = () => {
             </button>
             <div className="ticket__container">
                 <div className="ticket__content">
-                    <div className="ticket__header">
-
-                    </div>
+                    <TicketHeader />
 
                     <div className="ticket__divider">
                         <div className="ticket__notch ticket__notch--left"></div>
@@ -23,19 +23,7 @@ export const Ticket: React.FC = () => {
                         <div className="ticket__notch ticket__notch--right"></div>
                     </div>
 
-                    <div className="ticket__body">
-
-                    </div>
-
-                    <div className="ticket__divider">
-                        <div className="ticket__notch ticket__notch--left"></div>
-                        <div className="ticket__dashed-line"></div>
-                        <div className="ticket__notch ticket__notch--right"></div>
-                    </div>
-
-                    <div className="ticket__footer">
-
-                    </div>
+                    <TicketBody />
                 </div>
             </div>
         </div>
