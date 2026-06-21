@@ -8,14 +8,14 @@ export const Farewell: React.FC = () => {
     return (
         <div className='farewell'>
             <div className="farewell__container">
-                <ScrollReveal direction="up" distance={40} duration={3.2} delay={0.4} className="farewell__reveal">
+                <ScrollReveal direction="up" distance={20} duration={1.2} delay={0.1} className="farewell__reveal">
                     <div className="farewell__image">
                         <img src={cake} alt="Cake" loading="lazy" />
                     </div>
                 </ScrollReveal>
 
             </div>
-            <ScrollReveal direction='none' delay={1.2}>
+            <ScrollReveal direction='none' duration={1.0} delay={0.25}>
                 <div className="farewell-couple">
                     <div className="farewell-couple__bg" style={{ backgroundImage: `url(${bg})` }}></div>
                     <ParticleRain colors={['#C09080']} intervalMs={220} />
@@ -31,7 +31,7 @@ export const Farewell: React.FC = () => {
                         </div>
                     </div>
 
-                    <ScrollReveal direction="up" distance={40} duration={3.2} delay={0.4} className="farewell-couple__phrase-reveal">
+                    <ScrollReveal direction="up" distance={20} duration={1.2} delay={0.15} className="farewell-couple__phrase-reveal">
                         <div className="farewell-couple__promo">
                             ¿Quieres una invitación como esta? <a href="https://www.instagram.com/tuamigoinvitaciones/" target="_blank" rel="noopener noreferrer">TuAmigoInvitaciones</a>
                         </div>

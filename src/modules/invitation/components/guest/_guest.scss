@@ -1,26 +1,26 @@
 .guest {
-    padding: 5rem 0;
-    background-color: variables.$color-primary-50;
+    padding: 8rem 0;
+    background-color: $color-primary-200;
     display: flex;
     justify-content: center;
     align-items: center;
 
     &__container {
         padding: 0.8rem;
-        background-color: variables.$color-bg;
-        border: 1px solid variables.$color-tertiary-500;
+        background-color: $color-bg;
+        border: 1px solid $color-tertiary-500;
         width: 90%;
         max-width: 440px;
         margin: 0 auto;
         opacity: .8;
         box-shadow:
-            0 20px 40px rgba(variables.$color-primary-900, 0.08),
+            0 20px 40px rgba($color-primary-900, 0.08),
             0 5px 15px rgba(0, 0, 0, 0.03);
     }
 
     &__content {
         padding: 3.6rem 2.4rem;
-        border: 1px solid rgba(variables.$color-tertiary-500, 0.5);
+        border: 1px solid rgba($color-tertiary-500, 0.5);
         border-radius: 8px;
         text-align: center;
     }
@@ -32,14 +32,14 @@
     &__message {
         font-size: 1.4rem;
         line-height: 1.6;
-        color: variables.$color-neutral-700;
+        color: $color-neutral-700;
         margin: 0 auto;
         max-width: 90%;
 
         .text-strong {
-            color: variables.$color-tertiary-700;
+            color: $color-tertiary-700;
             font-weight: 600;
-            border-bottom: 1.5px solid rgba(variables.$color-tertiary-500, 0.6);
+            border-bottom: 1.5px solid rgba($color-tertiary-500, 0.6);
             padding-bottom: 2px;
         }
     }
@@ -48,8 +48,8 @@
         margin: 3.6rem 0;
         margin-bottom: 2rem;
         padding: 2.4rem 0;
-        border-top: 1px dashed rgba(variables.$color-tertiary-500, 0.6);
-        border-bottom: 1px dashed rgba(variables.$color-tertiary-500, 0.6);
+        border-top: 1px dashed rgba($color-tertiary-500, 0.6);
+        border-bottom: 1px dashed rgba($color-tertiary-500, 0.6);
 
         &-label {
             display: block;
@@ -57,7 +57,7 @@
             font-size: 1.1rem;
             font-weight: 500;
             letter-spacing: 2.5px;
-            color: variables.$color-primary-500;
+            color: $color-primary-500;
             margin-bottom: 0.8rem;
             text-transform: uppercase;
         }
@@ -65,23 +65,14 @@
         &-name {
             font-family: 'Pinyon Script', cursive;
             font-size: 3.6rem;
-            color: variables.$color-tertiary-900;
+            color: $color-tertiary-900;
             margin: 0;
             line-height: 1.2;
             text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
         }
     }
 
-    &__icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4rem;
 
-        img {
-            width: 15rem;
-        }
-    }
 
     &__button,
     button {
@@ -89,6 +80,6 @@
         justify-content: center;
         width: 100%;
         margin-top: 2rem;
-        color: variables.$color-bg;
+        color: $color-bg;
     }
 }

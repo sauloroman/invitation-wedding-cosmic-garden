@@ -21,7 +21,7 @@ export const Itinerary: React.FC = () => {
                         <i className='bxf bx-star itinerary__decoration-icon' />
                     </div>
 
-                    <ScrollReveal direction='up' distance={40} duration={1.5}>
+                    <ScrollReveal direction='up' distance={20} duration={1.0} delay={0.1}>
                         <SectionHeader
                             title='Itinerario'
                             subtitle='Nuestro recorrido juntos'
@@ -31,7 +31,7 @@ export const Itinerary: React.FC = () => {
 
                 <ul className="itinerary__list">
                     <li className='itinerary__item'>
-                        <ScrollReveal direction='right' distance={50} duration={1.5} delay={1}>
+                        <ScrollReveal direction='right' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
                                     <img src={itinerary1} alt="Itinerario 1" className='itinerary__card-icon' loading="lazy" />
@@ -44,7 +44,7 @@ export const Itinerary: React.FC = () => {
                         </ScrollReveal>
                     </li>
                     <li className='itinerary__item'>
-                        <ScrollReveal direction='left' distance={50} duration={1.5} delay={1}>
+                        <ScrollReveal direction='left' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
                                     <img src={itinerary2} alt="Itinerario 2" className='itinerary__card-icon' loading="lazy" />
@@ -57,7 +57,7 @@ export const Itinerary: React.FC = () => {
                         </ScrollReveal>
                     </li>
                     <li className='itinerary__item'>
-                        <ScrollReveal direction='right' distance={50} duration={1.5} delay={1}>
+                        <ScrollReveal direction='right' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
                                     <img src={itinerary3} alt="Itinerario 3" className='itinerary__card-icon' loading="lazy" />
@@ -70,7 +70,7 @@ export const Itinerary: React.FC = () => {
                         </ScrollReveal>
                     </li>
                     <li className='itinerary__item'>
-                        <ScrollReveal direction='left' distance={50} duration={1.5} delay={1}>
+                        <ScrollReveal direction='left' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
                                     <img src={itinerary4} alt="Itinerario 4" className='itinerary__card-icon' loading="lazy" />
@@ -83,7 +83,7 @@ export const Itinerary: React.FC = () => {
                         </ScrollReveal>
                     </li>
                     <li className='itinerary__item'>
-                        <ScrollReveal direction='right' distance={50} duration={1.5} delay={1}>
+                        <ScrollReveal direction='right' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
                                     <img src={itinerary5} alt="Itinerario 5" className='itinerary__card-icon' loading="lazy" />
@@ -96,7 +96,7 @@ export const Itinerary: React.FC = () => {
                         </ScrollReveal>
                     </li>
                     <li className='itinerary__item'>
-                        <ScrollReveal direction='left' distance={50} duration={1.5} delay={1}>
+                        <ScrollReveal direction='left' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
                                     <img src={itinerary6} alt="Itinerario 6" className='itinerary__card-icon' loading="lazy" />
