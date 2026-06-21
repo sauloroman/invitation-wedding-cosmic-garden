@@ -12,6 +12,7 @@ export const ModalMaster: React.FC = () => {
     return (
         <>
             {modal.isOpen && modal.modalName === MODAL_NAMES.presents && <PresentsGifModal />}
+            {/* {modal.isOpen && modal.modalName === MODAL_NAMES.ticket && <PresentsGifModal />} */}
         </>
     )
 }

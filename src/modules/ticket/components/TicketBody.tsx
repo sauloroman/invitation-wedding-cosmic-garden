@@ -23,10 +23,6 @@ export const TicketBody: React.FC = () => {
                     <span className="ticket__pass-count">01</span>
                     <span className="ticket__pass-label">Niños</span>
                 </div>
-                <div className="ticket__pass-card ticket__pass-card--table">
-                    <span className="ticket__pass-count">12</span>
-                    <span className="ticket__pass-label">Mesa</span>
-                </div>
             </div>
         </div>
     )
