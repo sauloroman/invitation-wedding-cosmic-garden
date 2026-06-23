@@ -4,7 +4,7 @@
     padding-bottom: 12rem;
 
     &__bg {
-        @include mixins.backgroundImage(0.9);
+        @include mixins.backgroundImage(1);
         margin-bottom: -10rem;
     }
 

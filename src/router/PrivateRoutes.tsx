@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { Menu } from '@/common/components/Menu/Menu'
 import { MenuButton } from '@/common/components/Menu/MenuButton'
 
@@ -21,6 +21,7 @@ export const PrivateRoutes: React.FC = () => {
                 <Route path='/' element={<Invitation />} />
                 <Route path='envelope' element={<Envelope />} />
                 <Route path='ticket' element={<Ticket />} />
+                <Route path='*' element={<Navigate to={'/envelope'} replace />} />
             </Routes>
             {showMenu && (
                 <>

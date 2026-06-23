@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import { useNavigation } from '@/common/hooks/useNavigate'
 import { useMenu } from '@/common/hooks/useMenu'
 import './_menu.scss'
+import { useTicket } from '@/modules/ticket/hooks/useTicket'
 
 export const Menu: React.FC = () => {
     const { isOpen, handleCloseMenu } = useMenu()
     const { navigateTo } = useNavigation()
     const navigate = useNavigate()
+    const { onRemoveTicket } = useTicket()
 
     const handleNavigate = (path: string, hash?: string) => {
         handleCloseMenu()
@@ -29,6 +31,11 @@ export const Menu: React.FC = () => {
         } else {
             navigateTo(path)
         }
+    }
+
+    const onLogout = () => {
+        onRemoveTicket()
+        navigateTo('/search')
     }
 
     return (
@@ -81,6 +88,11 @@ export const Menu: React.FC = () => {
                                 <span>Mesa de Regalos</span>
                             </li>
                         </ul>
+
+                        <button className="menu__btn menu__btn--exit" onClick={onLogout}>
+                            <i className="bx bx-arrow-left" />
+                            <span>Salir</span>
+                        </button>
                     </nav>
                 </div>
             </aside>

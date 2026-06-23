@@ -60,6 +60,14 @@
         margin-bottom: 4rem;
     }
 
+    &__link {
+        display: block;
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: bold;
+        color: variables.$color-primary-700;
+    }
+
     &__names {
         font-family: 'Pinyon Script', cursive;
         font-size: 3.6rem;

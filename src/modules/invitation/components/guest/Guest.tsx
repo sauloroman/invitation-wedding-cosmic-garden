@@ -2,9 +2,11 @@ import React from 'react'
 import './_guest.scss'
 import { Button, SectionHeader, ScrollReveal } from '@/common/components'
 import { useNavigation } from '@/common/hooks/useNavigate'
+import { useTicket } from '@/modules/ticket/hooks/useTicket'
 
 export const Guest: React.FC = () => {
     const { navigateTo } = useNavigation()
+    const { ticket: { name } } = useTicket()
 
     return (
         <section className='guest'>
@@ -26,19 +28,31 @@ export const Guest: React.FC = () => {
                     <ScrollReveal direction="up" distance={20} duration={1.0} delay={0.4}>
                         <div className="guest__guest">
                             <span className="guest__guest-label">Invitado Especial</span>
-                            <p className="guest__guest-name">Nombre Invitado</p>
+                            <p className="guest__guest-name">{name}</p>
                         </div>
                     </ScrollReveal>
 
                     <ScrollReveal direction="up" distance={20} duration={1.0} delay={0.55}>
-                        <div className='guest__button'>
-                            <Button
-                                action={() => navigateTo('/ticket')}
-                                variant='primary'
-                            >
-                                Ver mis boletos
-                            </Button>
-                        </div>
+                        <section className="guest__buttons">
+                            <div className='guest__button'>
+                                <Button
+                                    action={() => navigateTo('/ticket')}
+                                    variant='primary'
+                                >
+                                    Ver mis boletos
+                                </Button>
+                            </div>
+                            <div className="guest__button">
+                                <Button
+                                    action={() => navigateTo('/rsvp')}
+                                    variant='outline-secondary'
+                                >
+                                    <p className='color-secondary'>
+                                        Confirmar asistencia
+                                    </p>
+                                </Button>
+                            </div>
+                        </section>
                     </ScrollReveal>
                 </div>
             </div>

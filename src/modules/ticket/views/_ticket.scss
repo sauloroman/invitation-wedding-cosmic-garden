@@ -9,7 +9,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    background-color: $color-primary-50;
+    background-color: $color-primary-200;
 
     &__background {
         position: absolute;
@@ -21,7 +21,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        opacity: 0.8;
+        opacity: 0.7;
     }
 
     &__back-btn {
@@ -61,8 +61,8 @@
         padding: 0.8rem;
         height: 100%;
         width: 100%;
-        max-width: 360px;
-        max-height: 720px;
+        max-width: 35rem;
+        max-height: 70rem;
         box-sizing: border-box;
         border: 1px solid rgba($color-neutral-300, 0.5);
         position: relative;
@@ -97,12 +97,11 @@
     }
 
     &__event-subtitle {
-        font-family: 'Playfair Display SC', serif;
-        font-size: 1.2rem;
-        font-weight: 600;
+        font-family: 'Pinyon Script', serif;
+        font-size: 2rem;
+        font-weight: 700;
         letter-spacing: 3px;
-        color: $color-secondary-600;
-        text-transform: uppercase;
+        color: $color-primary-600;
     }
 
     &__couple-names {
@@ -265,7 +264,7 @@
     &__guest-label {
         font-family: 'Playfair Display SC', serif;
         font-size: 1.2rem;
-        color: $color-secondary-500;
+        color: $color-primary-500;
         letter-spacing: 1.5px;
         text-transform: uppercase;
         font-weight: 700;
@@ -330,7 +329,7 @@
         font-size: 1.2rem;
         font-weight: 700;
         letter-spacing: 0.5px;
-        color: $color-secondary-600;
+        color: $color-primary-600;
         text-transform: uppercase;
 
         .ticket__pass-card--table & {

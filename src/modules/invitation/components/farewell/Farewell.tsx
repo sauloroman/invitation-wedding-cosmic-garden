@@ -35,6 +35,7 @@ export const Farewell: React.FC = () => {
                         <div className="farewell-couple__promo">
                             ¿Quieres una invitación como esta? <a href="https://www.instagram.com/tuamigoinvitaciones/" target="_blank" rel="noopener noreferrer">TuAmigoInvitaciones</a>
                         </div>
+                        <a className='farewell-couple__link' href="https://wa.me/524496548073" target="_blank" rel="noopener noreferrer">449 654 80 73</a>
                     </ScrollReveal>
 
                 </div>

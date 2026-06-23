@@ -18,7 +18,6 @@ export const Family: React.FC = () => {
             <div className={`family__card-wrapper ${isFlipped ? 'family__card-wrapper--flipped' : ''}`}>
                 <div className="family__card-inner">
 
-                    {/* FRONT SIDE - PADRES */}
                     <div className="family__card-front family__container">
                         <div className="family__content">
                             <ScrollReveal direction="down" distance={20} blur={3} duration={1.0} delay={0.1}>

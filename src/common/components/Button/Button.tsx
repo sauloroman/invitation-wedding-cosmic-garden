@@ -5,7 +5,8 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode
     action: () => void,
     variant?: 'primary' | 'secondary' | 'accent' | 'outline' | 'outline-primary' | 'outline-secondary' | 'outline-tertiary' | 'outline-accent'
-    size?: 'small' | 'medium' | 'large'
+    size?: 'small' | 'medium' | 'large',
+    className?: string
 }
 
 export const Button: React.FC<Props> = ({

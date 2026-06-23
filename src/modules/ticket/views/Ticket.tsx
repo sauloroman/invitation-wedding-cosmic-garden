@@ -4,8 +4,11 @@ import { TicketBody } from '../components/TicketBody'
 import { TicketFooter } from '../components/TicketFooter'
 import './_ticket.scss'
 import bg from '@/assets/images/bg-ticket.jpeg'
+import { useTicket } from '../hooks/useTicket'
 
 export const Ticket: React.FC = () => {
+
+    const { ticket } = useTicket()
 
     return (
         <div className='ticket'>
@@ -20,7 +23,7 @@ export const Ticket: React.FC = () => {
                         <div className="ticket__notch ticket__notch--right"></div>
                     </div>
 
-                    <TicketBody />
+                    <TicketBody ticket={ticket} />
 
                     <div className="ticket__divider">
                         <div className="ticket__notch ticket__notch--left"></div>
@@ -28,7 +31,7 @@ export const Ticket: React.FC = () => {
                         <div className="ticket__notch ticket__notch--right"></div>
                     </div>
 
-                    <TicketFooter />
+                    <TicketFooter ticket={ticket} />
                 </div>
             </div>
         </div>

@@ -1,0 +1,104 @@
+.search {
+    height: 100dvh;
+    position: relative;
+    background-color: $color-primary-200;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+    &__container {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        width: 80%;
+        background-color: $color-primary-50;
+        padding: 2rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    &__hero {
+        text-align: center;
+
+        &-eyebrow {
+            font-family: 'Playfair Display SC', serif;
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: $color-tertiary-600;
+            margin-bottom: 0.8rem;
+        }
+
+        &-title {
+            font-family: 'Playfair Display SC', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: $color-primary-900;
+            line-height: 1.3;
+            margin-bottom: 0.6rem;
+        }
+
+    }
+
+    &__logo {
+        font-size: 2rem;
+        color: $color-primary-400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        width: 12rem;
+    }
+
+    &__button {
+        color: white;
+        width: 100%;
+    }
+
+    &__input-container {
+        margin-bottom: 2rem;
+    }
+
+    &__input-label {
+        display: block;
+        font-size: 1.4rem;
+        text-align: center;
+        color: $color-secondary-800;
+        font-weight: 500;
+        margin-bottom: rem;
+    }
+
+    &__input-error {
+        display: block;
+        text-align: right;
+        color: rgb(179, 20, 20);
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    &__input {
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid $color-secondary-300;
+        border-radius: 8px;
+        font-size: 1.6rem;
+    }
+
+}
