@@ -10,6 +10,8 @@ export const Ticket: React.FC = () => {
 
     const { ticket } = useTicket()
 
+    if (!ticket) return null
+
     return (
         <div className='ticket'>
             <div className="ticket__background" style={{ backgroundImage: `url(${bg})` }}></div>
