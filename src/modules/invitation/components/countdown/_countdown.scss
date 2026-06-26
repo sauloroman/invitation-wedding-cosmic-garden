@@ -6,7 +6,7 @@
     padding: 12rem 5rem;
     position: relative;
     text-align: center;
-    position: relative;
+    background-color: #ffffff;
 
     &__bg {
         position: absolute;
@@ -17,6 +17,8 @@
         background-size: cover;
         background-repeat: no-repeat;
         opacity: .9;
+        mix-blend-mode: multiply;
+        filter: contrast(1.2) brightness(1.1);
     }
 
 

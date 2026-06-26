@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
-import bg from '@/assets/images/search.png'
+import bg from '@/assets/images/search.webp'
 import { Button, ScrollReveal } from '@/common/components'
 import { useTicket } from '@/modules/ticket/hooks/useTicket'
 import './_search.scss'

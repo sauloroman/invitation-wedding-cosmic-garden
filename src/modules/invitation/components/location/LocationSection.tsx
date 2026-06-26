@@ -1,5 +1,5 @@
 import React from "react"
-import { onGoToGoogleMaps } from "@/common/helpers/navigate";
+import { onGoToSite } from "@/common/helpers/navigate";
 import { Button, ScrollReveal } from "@/common/components";
 
 interface Props {
@@ -34,7 +34,7 @@ export const LocationSection: React.FC<Props> = ({
                         <span>{hour}</span>
                     </div>
                     <div className="location__card-button">
-                        <Button action={() => onGoToGoogleMaps(buttonUrl)} variant="outline-tertiary">
+                        <Button action={() => onGoToSite(buttonUrl)} variant="outline-tertiary">
                             Ver Ubicación
                         </Button>
                     </div>

@@ -3,6 +3,7 @@ import './_guest.scss'
 import { Button, SectionHeader, ScrollReveal } from '@/common/components'
 import { useNavigation } from '@/common/hooks/useNavigate'
 import { useTicket } from '@/modules/ticket/hooks/useTicket'
+import { onGoToSite } from '@/common/helpers/navigate'
 
 export const Guest: React.FC = () => {
     const { navigateTo } = useNavigation()
@@ -44,7 +45,7 @@ export const Guest: React.FC = () => {
                             </div>
                             <div className="guest__button">
                                 <Button
-                                    action={() => navigateTo('/rsvp')}
+                                    action={() => onGoToSite('https://forms.gle/UfAavGyh9uZDvCeF9')}
                                     variant='outline-secondary'
                                 >
                                     <p className='color-secondary'>

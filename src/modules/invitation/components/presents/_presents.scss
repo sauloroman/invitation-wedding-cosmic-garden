@@ -2,10 +2,13 @@
     position: relative;
     padding: 5rem 0;
     padding-bottom: 12rem;
+    background-color: #ffffff;
 
     &__bg {
-        @include mixins.backgroundImage(1);
-        margin-bottom: -10rem;
+        @include mixins.backgroundImage(.9);
+        z-index: 1;
+        mix-blend-mode: multiply;
+        filter: contrast(1.2) brightness(1.1);
     }
 
     &__container {
@@ -14,17 +17,17 @@
     }
 
     &__message {
-        text-align: center;
         width: 80%;
         margin: 3rem auto 3rem;
         padding: 0 2rem;
         font-size: 1.4rem;
         color: variables.$color-primary-800;
+        text-align: center;
     }
 
     &__options {
-        margin: 0 auto;
         width: 85%;
+        margin: 0 auto;
     }
 
     &__option {

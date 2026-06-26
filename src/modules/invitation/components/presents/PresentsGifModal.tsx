@@ -2,7 +2,7 @@ import React from 'react'
 import { Modal } from '@/common/components/Modal/Modal'
 import { gifts } from '@/common/data/gifts'
 import { Button } from '@/common/components'
-import { onGoToGoogleMaps } from '@/common/helpers/navigate'
+import { onGoToSite } from '@/common/helpers/navigate'
 
 export const PresentsGifModal: React.FC = () => {
     return (
@@ -20,7 +20,7 @@ export const PresentsGifModal: React.FC = () => {
                         <div className="gifts-list__button">
                             <Button
                                 variant='outline-secondary'
-                                action={() => onGoToGoogleMaps(gift.url)}
+                                action={() => onGoToSite(gift.url)}
                             >
                                 Regalar <i className="bx bx-link-external"></i>
                             </Button>

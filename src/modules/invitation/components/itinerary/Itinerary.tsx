@@ -34,7 +34,7 @@ export const Itinerary: React.FC = () => {
                         <ScrollReveal direction='right' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
-                                    <img src={itinerary1} alt="Itinerario 1" className='itinerary__card-icon' loading="lazy" />
+                                    <img src={itinerary1} alt="Itinerario 1" className='itinerary__card-icon' />
                                 </div>
                                 <div className="itinerary__card-content">
                                     <span className="itinerary__card-badge">07:00 P.M.</span>
@@ -47,7 +47,7 @@ export const Itinerary: React.FC = () => {
                         <ScrollReveal direction='left' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
-                                    <img src={itinerary2} alt="Itinerario 2" className='itinerary__card-icon' loading="lazy" />
+                                    <img src={itinerary2} alt="Itinerario 2" className='itinerary__card-icon' />
                                 </div>
                                 <div className="itinerary__card-content">
                                     <span className="itinerary__card-badge">09:00 P.M.</span>
@@ -60,7 +60,7 @@ export const Itinerary: React.FC = () => {
                         <ScrollReveal direction='right' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
-                                    <img src={itinerary3} alt="Itinerario 3" className='itinerary__card-icon' loading="lazy" />
+                                    <img src={itinerary3} alt="Itinerario 3" className='itinerary__card-icon' />
                                 </div>
                                 <div className="itinerary__card-content">
                                     <span className="itinerary__card-badge">10:30 P.M.</span>
@@ -73,7 +73,7 @@ export const Itinerary: React.FC = () => {
                         <ScrollReveal direction='left' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
-                                    <img src={itinerary4} alt="Itinerario 4" className='itinerary__card-icon' loading="lazy" />
+                                    <img src={itinerary4} alt="Itinerario 4" className='itinerary__card-icon' />
                                 </div>
                                 <div className="itinerary__card-content">
                                     <span className="itinerary__card-badge">11:30 P.M.</span>
@@ -86,7 +86,7 @@ export const Itinerary: React.FC = () => {
                         <ScrollReveal direction='right' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
-                                    <img src={itinerary5} alt="Itinerario 5" className='itinerary__card-icon' loading="lazy" />
+                                    <img src={itinerary5} alt="Itinerario 5" className='itinerary__card-icon' />
                                 </div>
                                 <div className="itinerary__card-content">
                                     <span className="itinerary__card-badge">11:45 A.M.</span>
@@ -99,7 +99,7 @@ export const Itinerary: React.FC = () => {
                         <ScrollReveal direction='left' distance={30} duration={1.0} delay={0.15}>
                             <div className="itinerary__card">
                                 <div className="itinerary__card-icon-container">
-                                    <img src={itinerary6} alt="Itinerario 6" className='itinerary__card-icon' loading="lazy" />
+                                    <img src={itinerary6} alt="Itinerario 6" className='itinerary__card-icon' />
                                 </div>
                                 <div className="itinerary__card-content">
                                     <span className="itinerary__card-badge">03:00 A.M.</span>

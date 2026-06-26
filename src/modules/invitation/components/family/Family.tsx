@@ -47,7 +47,7 @@ export const Family: React.FC = () => {
 
                             <ScrollReveal direction="none" scale={0.96} rotate={-10} blur={2} duration={1.0} delay={0.55}>
                                 <div className='family__iconBox' onClick={handleFlip}>
-                                    <img src={iniciales} alt="Iniciales" className='family__icon' loading="lazy" />
+                                    <img src={iniciales} alt="Iniciales" className='family__icon' />
                                     <span className="family__flip-hint">Ver padrinos</span>
                                 </div>
                             </ScrollReveal>
@@ -71,7 +71,7 @@ export const Family: React.FC = () => {
                             </section>
 
                             <div className='family__iconBox' onClick={handleFlip}>
-                                <img src={iniciales} alt="Iniciales" className='family__icon' loading="lazy" />
+                                <img src={iniciales} alt="Iniciales" className='family__icon' />
                                 <span className="family__flip-hint">Ver padres</span>
                             </div>
                         </div>

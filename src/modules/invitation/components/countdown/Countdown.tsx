@@ -1,7 +1,7 @@
 import React from 'react'
 import './_countdown.scss'
 import { Timer, SectionHeader, ScrollReveal } from '@/common/components'
-import { getEnvVariables } from '@/common/helpers/get-env-variables';
+import { getEnvVariables } from '@/common/helpers/get-env-variables'
 import bg from '@/assets/images/bg-countdown.jpeg'
 
 const { VITE_INVITATION_DATE } = getEnvVariables()
