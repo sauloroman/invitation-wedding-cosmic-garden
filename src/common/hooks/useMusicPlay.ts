@@ -10,8 +10,8 @@ audioInstance.loop = true
 export const useMusicPlay = () => {
     const dispatch = useDispatch()
     const { isPlaying } = useSelector((state: RootState) => state.music)
-    const [currentTime, setCurrentTime] = useState(0)
-    const [duration, setDuration] = useState(0)
+    const [currentTime, setCurrentTime] = useState(() => audioInstance.currentTime)
+    const [duration, setDuration] = useState(() => audioInstance.duration || 0)
 
     useEffect(() => {
         if (isPlaying) {
@@ -31,11 +31,6 @@ export const useMusicPlay = () => {
         const handleLoadedMetadata = () => {
             setDuration(audioInstance.duration || 0)
         }
-
-        if (audioInstance.duration) {
-            setDuration(audioInstance.duration)
-        }
-        setCurrentTime(audioInstance.currentTime)
 
         audioInstance.addEventListener('timeupdate', handleTimeUpdate)
         audioInstance.addEventListener('loadedmetadata', handleLoadedMetadata)

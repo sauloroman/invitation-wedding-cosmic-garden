@@ -15,7 +15,6 @@ export const Message: React.FC = () => {
     return (
         <section className='message' ref={containerRef}>
             <div className="message__bg" style={{ backgroundImage: `url(${bg})` }}></div>
-            <div className="message__line message__line--bottom"></div>
             <ScrollReveal direction="up" distance={30} rotateX={-3} scale={0.98} blur={4} duration={1.2} delay={0.1}>
                 <section className='message__container'>
                     {isInView ? (

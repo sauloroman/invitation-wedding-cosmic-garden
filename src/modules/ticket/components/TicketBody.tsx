@@ -9,7 +9,7 @@ interface Props {
 
 export const TicketBody: React.FC<Props> = ({ ticket }) => {
     const { actions: { onSetModalContent, openModal } } = useModal()
-    const { name, adultsQuantity, kidsQuantity, qrCode } = ticket
+    const { name, adultsQuantity, kidsQuantity, qrCode, table } = ticket
 
     const onShowQrImage = (url: string) => {
         onSetModalContent(url);
@@ -27,6 +27,7 @@ export const TicketBody: React.FC<Props> = ({ ticket }) => {
             <div className="ticket__guest-info">
                 <span className="ticket__guest-label">Boleto para:</span>
                 <h3 className="ticket__guest-name">{name}</h3>
+                <p>Mesa: {table ?? 'Por asignar'}</p>
             </div>
 
             <div className="ticket__passes-info">

@@ -1,5 +1,5 @@
 .reminders {
-    padding-top: 12rem;
+    padding-top: 14rem;
     position: relative;
 
     &__bg {
@@ -10,9 +10,11 @@
         height: 100%;
         background-size: cover;
         background-position: center;
-        margin-top: -9rem;
+        margin-top: -5rem;
         opacity: .8;
         z-index: -1;
+        mix-blend-mode: multiply;
+        filter: contrast(1.2) brightness(1.15);
     }
 
     &__container {

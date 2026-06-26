@@ -1,13 +1,77 @@
 import React from 'react'
+import {
+    Church,
+    Wine,
+    Heart,
+    Camera,
+    ForkKnife,
+    MusicNotes,
+    Confetti,
+    Guitar,
+    Moon
+} from '@phosphor-icons/react'
 import './_itinerary.scss'
 import { SectionHeader, ScrollReveal } from '@/common/components'
 
-import itinerary1 from '@/assets/images/itinerary-1.png'
-import itinerary2 from '@/assets/images/itinerary-2.png'
-import itinerary3 from '@/assets/images/itinerary-3.png'
-import itinerary4 from '@/assets/images/itinerary-4.png'
-import itinerary5 from '@/assets/images/itinerary-5.png'
-import itinerary6 from '@/assets/images/itinerary-6.png'
+type PhosphorIcon = React.ComponentType<{
+    size?: number | string;
+    weight?: 'thin' | 'light' | 'regular' | 'bold' | 'fill' | 'duotone';
+    className?: string;
+}>;
+
+interface ItineraryEvent {
+    time: string;
+    description: string;
+    icon: PhosphorIcon;
+}
+
+const ITINERARY_EVENTS: ItineraryEvent[] = [
+    {
+        time: '07:00 P.M.',
+        description: 'Ceremonia Religiosa',
+        icon: Church
+    },
+    {
+        time: '09:00 P.M.',
+        description: 'Recepción',
+        icon: Wine
+    },
+    {
+        time: '09:30 P.M.',
+        description: 'Entrada de los novios',
+        icon: Heart
+    },
+    {
+        time: '09:30 - 10:00 P.M.',
+        description: 'Fotos con los novios',
+        icon: Camera
+    },
+    {
+        time: '10:00 - 10:30 P.M.',
+        description: 'Cena',
+        icon: ForkKnife
+    },
+    {
+        time: '10:40 P.M.',
+        description: 'Vals nupcial',
+        icon: MusicNotes
+    },
+    {
+        time: '11:00 P.M.',
+        description: 'Fiesta',
+        icon: Confetti
+    },
+    {
+        time: '12:00 - 02:00 A.M.',
+        description: 'Música Norteña',
+        icon: Guitar
+    },
+    {
+        time: '02:00 A.M.',
+        description: 'Fin de la fiesta',
+        icon: Moon
+    }
+];
 
 export const Itinerary: React.FC = () => {
     return (
@@ -30,88 +94,36 @@ export const Itinerary: React.FC = () => {
                 </div>
 
                 <ul className="itinerary__list">
-                    <li className='itinerary__item'>
-                        <ScrollReveal direction='right' distance={30} duration={1.0} delay={0.15}>
-                            <div className="itinerary__card">
-                                <div className="itinerary__card-icon-container">
-                                    <img src={itinerary1} alt="Itinerario 1" className='itinerary__card-icon' />
-                                </div>
-                                <div className="itinerary__card-content">
-                                    <span className="itinerary__card-badge">07:00 P.M.</span>
-                                    <p className="itinerary__card-description">Ceremonia Religiosa</p>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    </li>
-                    <li className='itinerary__item'>
-                        <ScrollReveal direction='left' distance={30} duration={1.0} delay={0.15}>
-                            <div className="itinerary__card">
-                                <div className="itinerary__card-icon-container">
-                                    <img src={itinerary2} alt="Itinerario 2" className='itinerary__card-icon' />
-                                </div>
-                                <div className="itinerary__card-content">
-                                    <span className="itinerary__card-badge">09:00 P.M.</span>
-                                    <p className="itinerary__card-description">Recepción</p>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    </li>
-                    <li className='itinerary__item'>
-                        <ScrollReveal direction='right' distance={30} duration={1.0} delay={0.15}>
-                            <div className="itinerary__card">
-                                <div className="itinerary__card-icon-container">
-                                    <img src={itinerary3} alt="Itinerario 3" className='itinerary__card-icon' />
-                                </div>
-                                <div className="itinerary__card-content">
-                                    <span className="itinerary__card-badge">10:30 P.M.</span>
-                                    <p className="itinerary__card-description">Cena</p>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    </li>
-                    <li className='itinerary__item'>
-                        <ScrollReveal direction='left' distance={30} duration={1.0} delay={0.15}>
-                            <div className="itinerary__card">
-                                <div className="itinerary__card-icon-container">
-                                    <img src={itinerary4} alt="Itinerario 4" className='itinerary__card-icon' />
-                                </div>
-                                <div className="itinerary__card-content">
-                                    <span className="itinerary__card-badge">11:30 P.M.</span>
-                                    <p className="itinerary__card-description">Brindis</p>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    </li>
-                    <li className='itinerary__item'>
-                        <ScrollReveal direction='right' distance={30} duration={1.0} delay={0.15}>
-                            <div className="itinerary__card">
-                                <div className="itinerary__card-icon-container">
-                                    <img src={itinerary5} alt="Itinerario 5" className='itinerary__card-icon' />
-                                </div>
-                                <div className="itinerary__card-content">
-                                    <span className="itinerary__card-badge">11:45 A.M.</span>
-                                    <p className="itinerary__card-description">Fiesta</p>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    </li>
-                    <li className='itinerary__item'>
-                        <ScrollReveal direction='left' distance={30} duration={1.0} delay={0.15}>
-                            <div className="itinerary__card">
-                                <div className="itinerary__card-icon-container">
-                                    <img src={itinerary6} alt="Itinerario 6" className='itinerary__card-icon' />
-                                </div>
-                                <div className="itinerary__card-content">
-                                    <span className="itinerary__card-badge">03:00 A.M.</span>
-                                    <p className="itinerary__card-description">Fin de la fiesta</p>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    </li>
+                    {ITINERARY_EVENTS.map((event, index) => {
+                        const IconComponent = event.icon;
+                        return (
+                            <li key={index} className='itinerary__item'>
+                                <ScrollReveal
+                                    direction={index % 2 === 0 ? 'right' : 'left'}
+                                    distance={30}
+                                    duration={1.0}
+                                    delay={0.15}
+                                >
+                                    <div className="itinerary__card">
+                                        <div className="itinerary__card-icon-container">
+                                            <IconComponent
+                                                weight="light"
+                                                size={32}
+                                                className="itinerary__card-icon"
+                                            />
+                                        </div>
+                                        <div className="itinerary__card-content">
+                                            <span className="itinerary__card-badge">{event.time}</span>
+                                            <p className="itinerary__card-description">{event.description}</p>
+                                        </div>
+                                    </div>
+                                </ScrollReveal>
+                            </li>
+                        );
+                    })}
                 </ul>
 
             </div>
         </section>
     )
 }
-
