@@ -38,7 +38,7 @@ export const Reminders: React.FC = () => {
                                 </ul>
                             </div>
                         </div>
-                        <p className='reminder__text'>El color azul está reservado para la novia.</p>
+                        <p className='reminder__text'>El color blanco está reservado para la novia.</p>
                     </div>
                 </ScrollReveal>
 
